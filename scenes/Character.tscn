@@ -148,12 +148,12 @@ shape = SubResource( 3 )
 position = Vector2( 0, -0.235962 )
 frames = SubResource( 30 )
 animation = "idle"
-frame = 3
+frame = 4
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
 current = true
-zoom = Vector2( 0.25, 0.25 )
+zoom = Vector2( 0.35, 0.35 )
 smoothing_enabled = true
 smoothing_speed = 15.0
 
