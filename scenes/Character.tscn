@@ -140,7 +140,6 @@ radius = 14.0659
 script = ExtResource( 3 )
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
-position = Vector2( 0.210224, 0 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D"]
 position = Vector2( 0, 2.31246 )
@@ -150,7 +149,7 @@ shape = SubResource( 1 )
 position = Vector2( 0, -0.235962 )
 frames = SubResource( 28 )
 animation = "idle"
-frame = 4
+frame = 8
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]

@@ -4,6 +4,25 @@ export (int) var speed = 200
 
 var velocity = Vector2()
 
+var plantable_crops = {
+	"carrots": "res://scenes/plants/Carrot.tscn"
+}
+
+func plant_crop(crop: String):
+	# @TODO: It should plant on the area that we're the most in
+	var areas = get_tree().get_nodes_in_group("PlantableArea")
+
+	for area in areas:
+		if area.get_node("DetectionArea").overlaps_area($KinematicBody2D/HarvestRange) \
+			and crop in plantable_crops.keys():
+				var crop_node = load(plantable_crops[crop]).instance()
+				get_tree().get_root().add_child(crop_node)
+				crop_node.position.x = area.position.x
+				crop_node.position.y = area.position.y
+				area.remove_from_group("PlantableArea") # Area is no longer plantable
+				area.add_to_group("GrowingPlantArea")
+				return
+
 func get_input():
 	velocity = Vector2()
 	

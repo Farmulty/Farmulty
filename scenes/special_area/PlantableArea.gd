@@ -8,5 +8,4 @@ func _on_DetectionArea_body_entered(body):
 		return
 	elif body.get_parent().is_in_group("Players"):
 		emit_signal("player_in_range")
-		print("Pog")
 		
