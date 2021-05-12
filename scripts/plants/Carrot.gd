@@ -3,10 +3,11 @@ extends StaticBody2D
 signal is_mature
 
 export var Stage: int
-var creation_date: int
+export var creation_date: int
 
 func _ready():
-	creation_date = OS.get_unix_time()
+	if creation_date == 0:
+		creation_date = OS.get_unix_time()
 
 func _on_Timer_timeout():
 	Stage += 1
