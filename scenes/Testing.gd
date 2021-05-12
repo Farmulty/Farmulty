@@ -15,3 +15,6 @@ func _on_Save_pressed():
 
 func _on_Load_pressed():
 	save.load_scene(get_tree(), "res://saves/test.tscn")
+
+func _process(delta):
+	$Path2D/PathFollow2D.offset += 15 * delta

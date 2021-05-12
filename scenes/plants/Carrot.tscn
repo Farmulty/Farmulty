@@ -20,7 +20,7 @@ animations = [ {
 radius = 2.28998
 height = 0.985315
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 7 )
 region = Rect2( 48, 16, 16, 16 )
 
@@ -43,5 +43,5 @@ autostart = true
 
 [node name="Sprite" type="Sprite" parent="."]
 show_behind_parent = true
-texture = SubResource( 5 )
+texture = SubResource( 3 )
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
