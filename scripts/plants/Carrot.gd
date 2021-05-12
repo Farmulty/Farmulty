@@ -14,7 +14,9 @@ func _on_Timer_timeout():
 	
 	$AnimatedSprite.frame = Stage
 	
-	if Stage == 5:
+	if Stage == 4:
+		$AnimatedSprite.hide()
+		$Mature.show()
 		emit_signal("is_mature")
 		$Timer.stop()
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://gfx/Overworld.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Character.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/Testing.gd" type="Script" id=3]
 [ext_resource path="res://gfx/licensed/SUNNYSIDE_WORLD_CHARACTERS_PARTS_V0.3.1/SWIMMING/base_swimming_strip12.png" type="Texture" id=4]
+[ext_resource path="res://scenes/special_area/PlantableArea.tscn" type="PackedScene" id=5]
 
 [sub_resource type="Curve2D" id=14]
 _data = {
@@ -150,7 +151,7 @@ position = Vector2( 609.029, 437.895 )
 curve = SubResource( 14 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2( -32.1504, 16.737 )
+position = Vector2( 87.3146, -82.3777 )
 rotation = -1.9118
 rotate = false
 
@@ -158,7 +159,7 @@ rotate = false
 position = Vector2( 0.0291748, 0.573364 )
 rotation = 1.9118
 frames = SubResource( 13 )
-frame = 8
+frame = 6
 playing = true
 flip_h = true
 
@@ -175,6 +176,32 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="PlantableAreas" type="Node2D" parent="."]
+
+[node name="PlantableArea" parent="PlantableAreas" instance=ExtResource( 5 )]
+position = Vector2( 232, 104 )
+
+[node name="PlantableArea2" parent="PlantableAreas" instance=ExtResource( 5 )]
+position = Vector2( 248, 104 )
+
+[node name="PlantableArea3" parent="PlantableAreas" instance=ExtResource( 5 )]
+position = Vector2( 264, 104 )
+
+[node name="PlantableArea4" parent="PlantableAreas" instance=ExtResource( 5 )]
+position = Vector2( 280, 104 )
+
+[node name="PlantableArea5" parent="PlantableAreas" instance=ExtResource( 5 )]
+position = Vector2( 232, 120 )
+
+[node name="PlantableArea6" parent="PlantableAreas" instance=ExtResource( 5 )]
+position = Vector2( 248, 120 )
+
+[node name="PlantableArea7" parent="PlantableAreas" instance=ExtResource( 5 )]
+position = Vector2( 264, 120 )
+
+[node name="PlantableArea8" parent="PlantableAreas" instance=ExtResource( 5 )]
+position = Vector2( 280, 120 )
 [connection signal="pressed" from="Character/Menu/Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Character/Menu/Save" to="." method="_on_Save_pressed"]
 [connection signal="pressed" from="Character/Menu/Load" to="." method="_on_Load_pressed"]
