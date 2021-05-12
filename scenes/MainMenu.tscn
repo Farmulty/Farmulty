@@ -55,3 +55,4 @@ margin_bottom = 527.635
 rect_scale = Vector2( 1.5, 1.5 )
 text = "Quit Game"
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

@@ -16,3 +16,9 @@ func _on_Timer_timeout():
 	if Stage == 5:
 		emit_signal("is_mature")
 		$Timer.stop()
+
+func harvest() -> bool:
+	if Stage != 5:
+		return false
+	else:
+		return true
