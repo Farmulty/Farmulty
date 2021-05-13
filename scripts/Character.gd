@@ -1,6 +1,6 @@
 extends Node2D
 
-export (int) var speed = 140
+export (int) var speed = 155
 
 var velocity = Vector2()
 export var current_position: Vector2 # Keeps track of current global position of the player since positon != the actual position

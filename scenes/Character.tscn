@@ -156,7 +156,7 @@ playing = true
 current = true
 zoom = Vector2( 0.35, 0.35 )
 smoothing_enabled = true
-smoothing_speed = 15.0
+smoothing_speed = 7.0
 
 [node name="HarvestRange" type="Area2D" parent="KinematicBody2D"]
 position = Vector2( 0, 1.12245 )
