@@ -23,6 +23,7 @@ func _on_Timer_timeout():
 		area.get_node("Hole").hide()
 	
 	if Stage == 4:
+		area.crop_mature()
 		emit_signal("is_mature")
 		$Timer.stop()
 

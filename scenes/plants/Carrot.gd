@@ -22,8 +22,7 @@ func _on_Timer_timeout():
 	if Stage == 4:
 		$AnimatedSprite.hide()
 		$Mature.show()
-		area.add_to_group("MaturePlantArea")
-		area.remove_from_group("GrowingPlantArea")
+		area.crop_mature()
 		emit_signal("is_mature")
 		$Timer.stop()
 

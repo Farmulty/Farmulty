@@ -4,6 +4,10 @@ signal player_in_range
 
 var crop
 
+func crop_mature():
+	add_to_group("MaturePlantArea")
+	remove_from_group("GrowingPlantArea")
+
 func reset():
 	crop = null
 
