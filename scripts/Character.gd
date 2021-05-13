@@ -19,7 +19,8 @@ func plant_crop(crop: String):
 	for area in areas:
 		if area.get_node("DetectionArea").overlaps_area($KinematicBody2D/HarvestRange) \
 			and crop in plantable_crops.keys():
-				area_distance[area] = current_position.distance_to(area.position) # Calculate each nodes distance to the player
+				area_distance[area] = (current_position + Vector2(0, 8)).distance_to(area.position) # Calculate each nodes distance to the player
+				# -> Adding 8 to the y makes it consider the base as the foots of the player, feels more natural
 				is_plantable = true
 
 	if is_plantable:

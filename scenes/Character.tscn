@@ -149,7 +149,6 @@ shape = SubResource( 1 )
 position = Vector2( 0, -0.235962 )
 frames = SubResource( 28 )
 animation = "idle"
-frame = 5
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
