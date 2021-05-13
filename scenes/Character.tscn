@@ -149,14 +149,14 @@ shape = SubResource( 1 )
 position = Vector2( 0, -0.235962 )
 frames = SubResource( 28 )
 animation = "idle"
-frame = 1
+frame = 5
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
 current = true
 zoom = Vector2( 0.35, 0.35 )
 smoothing_enabled = true
-smoothing_speed = 7.0
+smoothing_speed = 12.0
 
 [node name="HarvestRange" type="Area2D" parent="KinematicBody2D"]
 position = Vector2( 0, 1.12245 )
