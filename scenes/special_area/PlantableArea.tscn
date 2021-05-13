@@ -22,7 +22,7 @@ script = ExtResource( 2 )
 [node name="Dirt" type="Sprite" parent="."]
 texture = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Hole" type="Sprite" parent="."]
 texture = SubResource( 2 )
 
 [node name="DetectionArea" type="Area2D" parent="."]

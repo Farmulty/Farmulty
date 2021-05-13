@@ -36,7 +36,10 @@ func plant_crop(crop: String):
 
 		var crop_node = load(plantable_crops[crop]).instance()
 
-		get_tree().get_root().add_child(crop_node)
+		get_parent().get_node("Crops").add_child(crop_node)
+
+		crop_node.set_area(area)
+
 		crop_node.position.x = area.position.x
 		crop_node.position.y = area.position.y
 		area.remove_from_group("PlantableArea") # Area is no longer plantable
