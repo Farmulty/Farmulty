@@ -23,6 +23,7 @@ script = ExtResource( 2 )
 texture = SubResource( 1 )
 
 [node name="Hole" type="Sprite" parent="."]
+visible = false
 texture = SubResource( 2 )
 
 [node name="DetectionArea" type="Area2D" parent="."]

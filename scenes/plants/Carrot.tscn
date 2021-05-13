@@ -28,6 +28,8 @@ atlas = ExtResource( 7 )
 region = Rect2( 35, 432, 10, 11 )
 
 [node name="Carrot" type="StaticBody2D" groups=[
+"CarrotCrops",
+"Crops",
 "plants",
 ]]
 z_index = 1

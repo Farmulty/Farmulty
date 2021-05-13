@@ -117,11 +117,11 @@ z_index = 5
 
 [node name="Menu" type="CanvasLayer" parent="Character"]
 
-[node name="Button" type="Button" parent="Character/Menu"]
-margin_left = 8.02301
-margin_top = 75.3241
-margin_right = 109.023
-margin_bottom = 95.3241
+[node name="Plant" type="Button" parent="Character/Menu"]
+margin_left = 7.57756
+margin_top = 71.315
+margin_right = 108.578
+margin_bottom = 91.315
 text = "Plant Spawner"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -147,6 +147,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="CropType" type="LineEdit" parent="Character/Menu"]
+margin_left = 9.0
+margin_top = 99.0
+margin_right = 79.0
+margin_bottom = 123.0
+text = "Carrots"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2( 609.029, 437.895 )
 curve = SubResource( 1 )
@@ -160,7 +170,7 @@ rotate = false
 position = Vector2( 0.0291748, 0.573364 )
 rotation = 1.9118
 frames = SubResource( 14 )
-frame = 1
+frame = 4
 playing = true
 flip_h = true
 
@@ -282,7 +292,7 @@ position = Vector2( -42.5937, 171.06 )
 position = Vector2( 22.7751, 219.925 )
 
 [node name="Tree26" parent="Trees" instance=ExtResource( 6 )]
-position = Vector2( 33.9066, 118.495 )
+position = Vector2( 30.343, 133.195 )
 
 [node name="Tree27" parent="Trees" instance=ExtResource( 6 )]
 position = Vector2( -62.8451, -91.8484 )
@@ -450,6 +460,6 @@ position = Vector2( 935.746, 584.827 )
 position = Vector2( 946.878, 483.397 )
 
 [node name="Crops" type="Node2D" parent="."]
-[connection signal="pressed" from="Character/Menu/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Character/Menu/Plant" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Character/Menu/Save" to="." method="_on_Save_pressed"]
 [connection signal="pressed" from="Character/Menu/Load" to="." method="_on_Load_pressed"]

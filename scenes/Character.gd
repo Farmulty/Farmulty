@@ -6,7 +6,8 @@ var velocity = Vector2()
 export var current_position: Vector2 # Keeps track of current global position of the player since positon != the actual position
 
 var plantable_crops = {
-	"carrots": "res://scenes/plants/Carrot.tscn"
+	"Carrots": "res://scenes/plants/Carrot.tscn",
+	"Wheat": "res://scenes/plants/Wheat.tscn"
 }
 
 func plant_crop(crop: String):
