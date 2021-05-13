@@ -22,10 +22,12 @@ func _on_Timer_timeout():
 	if Stage == 4:
 		$AnimatedSprite.hide()
 		$Mature.show()
+		area.add_to_group("MaturePlantArea")
+		area.remove_from_group("GrowingPlantArea")
 		emit_signal("is_mature")
 		$Timer.stop()
 
-func harvest() -> bool:
+func harvestable() -> bool:
 	if Stage != 5:
 		return false
 	else:

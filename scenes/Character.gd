@@ -10,11 +10,23 @@ var plantable_crops = {
 	"Wheat": "res://scenes/plants/Wheat.tscn"
 }
 
+func find_closest_node(node: Dictionary) -> Node2D:
+	""" Finds the closest Node in dictionary of nodes """
+	var sorted_areas: Array = node.values()
+	sorted_areas.sort()
+
+	for key in node.keys(): # Find the closest node in the dictionary
+		if node[key] == sorted_areas[0]:
+			return key
+	
+	print_debug("Impossible issue")
+	return Node2D.new() # Never should be returned
+	
+
 func plant_crop(crop: String):
 	var is_plantable: bool = false
 	var area_distance: Dictionary
 
-	# @TODO: It should plant on the area that we're the most in
 	var areas = get_tree().get_nodes_in_group("PlantableArea")
 
 	for area in areas:
@@ -25,26 +37,39 @@ func plant_crop(crop: String):
 				is_plantable = true
 
 	if is_plantable:
-		var area
-
-		var sorted_areas: Array = area_distance.values()
-		sorted_areas.sort()
-
-		for key in area_distance.keys(): # Find the closest node in the dictionary
-			if area_distance[key] == sorted_areas[0]:
-				area = key
-				break
+		var area = find_closest_node(area_distance)
 
 		var crop_node = load(plantable_crops[crop]).instance()
 
 		get_parent().get_node("Crops").add_child(crop_node)
 
 		crop_node.set_area(area)
+		area.set_crop(crop_node)
 
 		crop_node.position.x = area.position.x
 		crop_node.position.y = area.position.y
 		area.remove_from_group("PlantableArea") # Area is no longer plantable
 		area.add_to_group("GrowingPlantArea")
+
+func harvest_crop():
+	var area_distance: Dictionary
+	var is_harvestable = false
+
+	var areas = get_tree().get_nodes_in_group("MaturePlantArea")
+
+	for area in areas:
+		if area.get_node("DetectionArea").overlaps_area($KinematicBody2D/HarvestRange):
+			area_distance[area] = (current_position + Vector2(0, 8)).distance_to(area.position)
+			is_harvestable = true
+	
+	if is_harvestable:
+		var area = find_closest_node(area_distance)
+		var crop = area.crop
+		
+		# @TODO: Actually create some item to pickup
+
+		area.reset()
+		crop.queue_free()
 
 func get_input():
 	velocity = Vector2()

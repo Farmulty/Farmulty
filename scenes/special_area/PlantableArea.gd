@@ -2,6 +2,22 @@ extends Node2D
 
 signal player_in_range
 
+var crop
+
+func reset():
+	crop = null
+
+	for group in get_groups():
+		remove_from_group(group)
+	
+	add_to_group("PlantableArea")
+
+	if not $Hole.visible:
+		$Hole.show()
+
+func set_crop(s_crop: Node2D):
+	crop = s_crop
+
 func _on_DetectionArea_body_entered(body):
 	if body.get_parent().is_in_group("PlantableArea"):
 		# Don't react to plantable areas entering the area

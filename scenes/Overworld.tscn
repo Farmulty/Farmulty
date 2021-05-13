@@ -157,6 +157,16 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Harvest" type="Button" parent="Character/Menu"]
+margin_left = 56.991
+margin_top = 42.3363
+margin_right = 127.991
+margin_bottom = 62.3363
+text = "Harvest"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2( 609.029, 437.895 )
 curve = SubResource( 1 )
@@ -170,7 +180,7 @@ rotate = false
 position = Vector2( 0.0291748, 0.573364 )
 rotation = 1.9118
 frames = SubResource( 14 )
-frame = 4
+frame = 2
 playing = true
 flip_h = true
 
@@ -463,3 +473,4 @@ position = Vector2( 946.878, 483.397 )
 [connection signal="pressed" from="Character/Menu/Plant" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Character/Menu/Save" to="." method="_on_Save_pressed"]
 [connection signal="pressed" from="Character/Menu/Load" to="." method="_on_Load_pressed"]
+[connection signal="pressed" from="Character/Menu/Harvest" to="." method="_on_Harvest_pressed"]
