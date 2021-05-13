@@ -2,66 +2,66 @@
 
 [ext_resource path="res://gfx/Overworld.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Character.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/Testing.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Overworld.gd" type="Script" id=3]
 [ext_resource path="res://gfx/licensed/SUNNYSIDE_WORLD_CHARACTERS_PARTS_V0.3.1/SWIMMING/base_swimming_strip12.png" type="Texture" id=4]
 [ext_resource path="res://scenes/special_area/PlantableArea.tscn" type="PackedScene" id=5]
 
-[sub_resource type="Curve2D" id=14]
+[sub_resource type="Curve2D" id=1]
 _data = {
 "points": PoolVector2Array( -47.9458, 3.74577, 47.9458, -3.74577, 87.3146, -82.3777, -7.49154, -12.361, 7.49154, 12.361, 149.869, -58.7794, 5.61865, -3.74577, -5.61865, 3.74577, 136.384, -5.58942, 28.4678, -7.49154, -28.4678, 7.49154, 85.4417, 22.5038, 0, 0, 0, 0, 13.8975, 28.8716, -7.11696, 43.0763, 7.11696, -43.0763, 1.16193, -19.4488, 0, 0, 0, 0, 87.3146, -82.3777 )
 }
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=3]
 atlas = ExtResource( 4 )
 region = Rect2( 96, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=4]
 atlas = ExtResource( 4 )
 region = Rect2( 192, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=5]
 atlas = ExtResource( 4 )
 region = Rect2( 288, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=5]
+[sub_resource type="AtlasTexture" id=6]
 atlas = ExtResource( 4 )
 region = Rect2( 384, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=6]
+[sub_resource type="AtlasTexture" id=7]
 atlas = ExtResource( 4 )
 region = Rect2( 480, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=7]
+[sub_resource type="AtlasTexture" id=8]
 atlas = ExtResource( 4 )
 region = Rect2( 576, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=8]
+[sub_resource type="AtlasTexture" id=9]
 atlas = ExtResource( 4 )
 region = Rect2( 672, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=9]
+[sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 4 )
 region = Rect2( 768, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=10]
+[sub_resource type="AtlasTexture" id=11]
 atlas = ExtResource( 4 )
 region = Rect2( 864, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=11]
+[sub_resource type="AtlasTexture" id=12]
 atlas = ExtResource( 4 )
 region = Rect2( 960, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=12]
+[sub_resource type="AtlasTexture" id=13]
 atlas = ExtResource( 4 )
 region = Rect2( 1056, 0, 96, 64 )
 
-[sub_resource type="SpriteFrames" id=13]
+[sub_resource type="SpriteFrames" id=14]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ) ],
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
 "name": "default",
 "speed": 7.0
@@ -111,7 +111,7 @@ format = 1
 tile_data = PoolIntArray( -1310708, 14, 0, -1310702, 14, 0, -1310685, 14, 0, -1310679, 14, 0, -1179660, 14, 0, -1179654, 14, 0, -1245178, 14, 0, -1245157, 14, 0, -1245155, 14, 0, -1245134, 14, 0, -1114130, 14, 0, -1179645, 14, 0, -1114097, 14, 0, -1114090, 14, 0, -1114074, 14, 0, -1114067, 14, 0, -983049, 14, 0, -983042, 14, 0, -1048567, 14, 0, -1048544, 14, 0, -917519, 14, 0, -851959, 14, 0, -851952, 14, 0, -851938, 14, 0, -851936, 14, 0, -851929, 14, 0, -851915, 14, 0, -720911, 14, 0, -720904, 14, 0, -786426, 14, 0, -720875, 14, 0, -720852, 14, 0, -589827, 14, 0, -589816, 14, 0, -589793, 14, 0, -458768, 14, 0, -524274, 14, 0, -524251, 14, 0, -393226, 14, 0, -458694, 14, 0, -458688, 14, 0, -393164, 14, 0, -393143, 14, 0, -327653, 14, 0, -327630, 14, 0, -262141, 14, 0, -262132, 14, 0, -262126, 14, 0, -262109, 14, 0, -262103, 14, 0, -262083, 14, 0, -262076, 14, 0, -131084, 14, 0, -131078, 14, 0, -196602, 14, 0, -196586, 14, 0, -196581, 14, 0, -196579, 14, 0, -196563, 14, 0, -196558, 14, 0, -196553, 14, 0, -65554, 14, 0, -65538, 14, 0, -131069, 14, 0, -65486, 14, 0, 55, 14, 0, 62, 14, 0, 76, 14, 0, 196592, 14, 0, 196598, 14, 0, 131139, 14, 0, 262122, 14, 0, 262143, 14, 0, 196616, 536870926, 0, 196650, 536870926, 0, 262165, 536870926, 0, 262171, 536870926, 0, 262198, 14, 0, 393203, 14, 0, 393210, 14, 0, 327740, 14, 0, 458733, 14, 0, 524324, 536870926, 0, 524333, 536870926, 0, 524338, 14, 0, 524361, 14, 0, 655341, 14, 0, 655348, 14, 0, 589826, 14, 0, 589882, 14, 0, 589888, 14, 0, 655412, 14, 0, 655428, 14, 0, 655433, 14, 0, 786425, 14, 0, 720903, 536870926, 0, 786493, 14, 0, 786500, 14, 0, 917484, 14, 0, 852003, 536870926, 0, 852023, 14, 0, 983026, 14, 0, 917550, 536870926, 0, 983068, 536870926, 0, 983090, 14, 0, 1048582, 536870926, 0, 1048594, 536870926, 0, 1048616, 536870926, 0, 1048631, 14, 0, 1048638, 14, 0, 1048652, 14, 0, 1179631, 14, 0, 1179637, 14, 0, 1179647, 14, 0, 1245161, 14, 0, 1245168, 14, 0, 1245174, 14, 0, 1245182, 14, 0, 1179661, 536870926, 0, 1179715, 14, 0, 1310698, 14, 0, 1310714, 14, 0, 1310719, 14, 0, 1245218, 536870926, 0, 1376242, 14, 0, 1376249, 14, 0, 1310774, 14, 0, 1441772, 14, 0, 1376265, 536870926, 0, 1376316, 14, 0, 1441819, 536870926, 0, 1572863, 14, 0, 1638380, 14, 0, 1638387, 14, 0, 1572894, 536870926, 0, 1572914, 14, 0, 1572937, 14, 0, 1638407, 536870926, 0, 1638417, 536870926, 0, 1638458, 14, 0, 1769464, 14, 0, 1704004, 14, 0, 1900523, 14, 0, 1900531, 14, 0, 1900537, 14, 0, 1835034, 536870926, 0, 1966061, 14, 0, 1966065, 14, 0, 1900594, 14, 0, 1900600, 14, 0, 1966083, 14, 0, 1966114, 14, 0, 1966121, 14, 0, 1966124, 14, 0, 1966127, 14, 0, 1966145, 14, 0, 2097142, 14, 0, 2097149, 14, 0, 2031625, 14, 0, 2031631, 14, 0, 2031637, 14, 0, 2031646, 14, 0, 2162672, 14, 0, 2162686, 14, 0, 2097205, 14, 0, 2097212, 14, 0, 2228207, 14, 0, 2228213, 14, 0, 2162706, 14, 0, 2162713, 14, 0, 2162721, 14, 0, 2162735, 14, 0, 2293737, 14, 0, 2293753, 14, 0, 2293758, 14, 0, 2228236, 14, 0, 2359280, 14, 0, 2359287, 14, 0, 2293765, 14, 0, 2293802, 14, 0, 2359303, 14, 0, 2359343, 14, 0, 2359350, 14, 0, 2359364, 14, 0, 2490364, 14, 0, 2424844, 14, 0, 2424851, 14, 0, 2424865, 14, 0, 2490427, 14, 0, 2621423, 14, 0, 2555928, 14, 0, 2686965, 14, 0, 2621486, 14, 0, 2686987, 14, 0, 2687028, 14, 0, 2752529, 14, 0, 2818050, 14, 0, 2949107, 14, 0, 2949113, 14, 0, 2883626, 14, 0, 2883649, 14, 0, 3014637, 14, 0, 3014653, 14, 0, 2949122, 14, 0, 2949127, 14, 0, 2949150, 14, 0, 2949170, 14, 0, 3014671, 14, 0, 3014716, 14, 0, 3080217, 14, 0, 3604493, 14, 0, 3604499, 14, 0, 3670023, 14, 0, 3670044, 14, 0, 3801104, 14, 0, 3801111, 14, 0, 3866634, 14, 0, 3997701, 14, 0, 4063242, 14, 0, 4063249, 14, 0, 4063263, 14, 0, 4194326, 14, 0, 4325385, 14, 0, 4390927, 14, 0, 4587525, 14, 0, 4587548, 14, 0, 4653069, 14, 0, 4718615, 14, 0 )
 
 [node name="Character" parent="." instance=ExtResource( 2 )]
-position = Vector2( 524.903, 362.605 )
+position = Vector2( 309.857, 132.96 )
 z_index = 5
 
 [node name="Menu" type="CanvasLayer" parent="Character"]
@@ -148,7 +148,7 @@ __meta__ = {
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2( 609.029, 437.895 )
-curve = SubResource( 14 )
+curve = SubResource( 1 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2( 87.3146, -82.3777 )
@@ -158,8 +158,8 @@ rotate = false
 [node name="FriedSwimming" type="AnimatedSprite" parent="Path2D/PathFollow2D"]
 position = Vector2( 0.0291748, 0.573364 )
 rotation = 1.9118
-frames = SubResource( 13 )
-frame = 11
+frames = SubResource( 14 )
+frame = 10
 playing = true
 flip_h = true
 
@@ -195,7 +195,7 @@ position = Vector2( 280, 104 )
 position = Vector2( 232, 120 )
 
 [node name="PlantableArea6" parent="PlantableAreas" instance=ExtResource( 5 )]
-position = Vector2( 248, 120 )
+position = Vector2( 248, 119.719 )
 
 [node name="PlantableArea7" parent="PlantableAreas" instance=ExtResource( 5 )]
 position = Vector2( 264, 120 )

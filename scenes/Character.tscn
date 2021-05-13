@@ -46,72 +46,72 @@ atlas = ExtResource( 4 )
 region = Rect2( 768, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=11]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 2 )
 region = Rect2( 96, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 2 )
 region = Rect2( 192, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 2 )
 region = Rect2( 288, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 2 )
 region = Rect2( 384, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 2 )
 region = Rect2( 480, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 2 )
 region = Rect2( 576, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 1 )
+atlas = ExtResource( 2 )
 region = Rect2( 672, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=19]
 atlas = ExtResource( 1 )
-region = Rect2( 768, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 2 )
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 1 )
 region = Rect2( 96, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 2 )
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 1 )
 region = Rect2( 192, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 2 )
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 1 )
 region = Rect2( 288, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=24]
-atlas = ExtResource( 2 )
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 1 )
 region = Rect2( 384, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=25]
-atlas = ExtResource( 2 )
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 1 )
 region = Rect2( 480, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=26]
-atlas = ExtResource( 2 )
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 1 )
 region = Rect2( 576, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=27]
-atlas = ExtResource( 2 )
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 1 )
 region = Rect2( 672, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 1 )
+region = Rect2( 768, 0, 96, 64 )
 
 [sub_resource type="SpriteFrames" id=28]
 animations = [ {
@@ -120,14 +120,14 @@ animations = [ {
 "name": "idle",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
-"loop": true,
-"name": "fishing_waiting",
-"speed": 8.0
-}, {
-"frames": [ SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"frames": [ SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ) ],
 "loop": true,
 "name": "running",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ) ],
+"loop": true,
+"name": "fishing_waiting",
 "speed": 8.0
 } ]
 
@@ -149,7 +149,7 @@ shape = SubResource( 1 )
 position = Vector2( 0, -0.235962 )
 frames = SubResource( 28 )
 animation = "idle"
-frame = 8
+frame = 1
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
@@ -159,6 +159,7 @@ smoothing_enabled = true
 smoothing_speed = 15.0
 
 [node name="HarvestRange" type="Area2D" parent="KinematicBody2D"]
+position = Vector2( 0, 1.12245 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D/HarvestRange"]
 shape = SubResource( 29 )
