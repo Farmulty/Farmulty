@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://gfx/inventory/item_box.png" type="Texture" id=1]
+[ext_resource path="res://scenes/inventory/Slot.gd" type="Script" id=2]
+
+[node name="Slot0" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="item_box" type="Sprite" parent="."]
+texture = ExtResource( 1 )
