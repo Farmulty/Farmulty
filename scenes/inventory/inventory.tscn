@@ -1,0 +1,78 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/inventory/inventory.gd" type="Script" id=1]
+[ext_resource path="res://gfx/inventory/item_box.png" type="Texture" id=2]
+[ext_resource path="res://gfx/inventory/selected_box.png" type="Texture" id=3]
+
+[node name="Inventory" type="CanvasLayer"]
+script = ExtResource( 1 )
+
+[node name="Slots" type="Node2D" parent="."]
+
+[node name="SelectedBox" type="Sprite" parent="Slots"]
+position = Vector2( 160, 544 )
+scale = Vector2( 4.6419, 4.6419 )
+texture = ExtResource( 3 )
+
+[node name="Slot0" type="Node2D" parent="Slots"]
+
+[node name="item_box" type="Sprite" parent="Slots/Slot0"]
+position = Vector2( 160, 544 )
+scale = Vector2( 4.57569, 4.57569 )
+texture = ExtResource( 2 )
+
+[node name="Slot1" type="Node2D" parent="Slots"]
+
+[node name="item_box" type="Sprite" parent="Slots/Slot1"]
+position = Vector2( 247.47, 543.47 )
+scale = Vector2( 4.57569, 4.57569 )
+texture = ExtResource( 2 )
+
+[node name="Slot2" type="Node2D" parent="Slots"]
+
+[node name="item_box" type="Sprite" parent="Slots/Slot2"]
+position = Vector2( 335.47, 543.47 )
+scale = Vector2( 4.57569, 4.57569 )
+texture = ExtResource( 2 )
+
+[node name="Slot3" type="Node2D" parent="Slots"]
+
+[node name="item_box" type="Sprite" parent="Slots/Slot3"]
+position = Vector2( 423.47, 543.47 )
+scale = Vector2( 4.57569, 4.57569 )
+texture = ExtResource( 2 )
+
+[node name="Slot4" type="Node2D" parent="Slots"]
+
+[node name="item_box" type="Sprite" parent="Slots/Slot4"]
+position = Vector2( 511.47, 543.47 )
+scale = Vector2( 4.57569, 4.57569 )
+texture = ExtResource( 2 )
+
+[node name="Slot5" type="Node2D" parent="Slots"]
+
+[node name="item_box" type="Sprite" parent="Slots/Slot5"]
+position = Vector2( 599.47, 543.47 )
+scale = Vector2( 4.57569, 4.57569 )
+texture = ExtResource( 2 )
+
+[node name="Slot6" type="Node2D" parent="Slots"]
+
+[node name="item_box" type="Sprite" parent="Slots/Slot6"]
+position = Vector2( 687.47, 543.47 )
+scale = Vector2( 4.57569, 4.57569 )
+texture = ExtResource( 2 )
+
+[node name="Slot7" type="Node2D" parent="Slots"]
+
+[node name="item_box" type="Sprite" parent="Slots/Slot7"]
+position = Vector2( 775.47, 543.47 )
+scale = Vector2( 4.57569, 4.57569 )
+texture = ExtResource( 2 )
+
+[node name="Slot8" type="Node2D" parent="Slots"]
+
+[node name="item_box" type="Sprite" parent="Slots/Slot8"]
+position = Vector2( 863.47, 543.47 )
+scale = Vector2( 4.57569, 4.57569 )
+texture = ExtResource( 2 )

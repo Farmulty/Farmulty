@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://gfx/Overworld.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Character.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://gfx/licensed/SUNNYSIDE_WORLD_CHARACTERS_PARTS_V0.3.1/SWIMMING/base_swimming_strip12.png" type="Texture" id=4]
 [ext_resource path="res://scenes/special_area/PlantableArea.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/plants/Tree.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/inventory/inventory.tscn" type="PackedScene" id=7]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -163,37 +164,6 @@ margin_top = 42.3363
 margin_right = 127.991
 margin_bottom = 62.3363
 text = "Harvest"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Path2D" type="Path2D" parent="."]
-position = Vector2( 609.029, 437.895 )
-curve = SubResource( 1 )
-
-[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
-position = Vector2( 87.3146, -82.3777 )
-rotation = -1.9118
-rotate = false
-
-[node name="FriedSwimming" type="AnimatedSprite" parent="Path2D/PathFollow2D"]
-position = Vector2( 0.0291748, 0.573364 )
-rotation = 1.9118
-frames = SubResource( 14 )
-frame = 2
-playing = true
-flip_h = true
-
-[node name="Label" type="Label" parent="Path2D/PathFollow2D/FriedSwimming"]
-margin_left = -13.712
-margin_top = -14.0266
-margin_right = 61.288
-margin_bottom = 16.9734
-rect_scale = Vector2( 0.4, 0.4 )
-text = "friedkeenan
-"
-align = 1
-valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -470,6 +440,41 @@ position = Vector2( 935.746, 584.827 )
 position = Vector2( 946.878, 483.397 )
 
 [node name="Crops" type="Node2D" parent="."]
+
+[node name="NPCs" type="Node2D" parent="."]
+
+[node name="Path2D" type="Path2D" parent="NPCs"]
+position = Vector2( 609.029, 437.895 )
+curve = SubResource( 1 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="NPCs/Path2D"]
+position = Vector2( 87.3146, -82.3777 )
+rotation = -1.9118
+rotate = false
+
+[node name="FriedSwimming" type="AnimatedSprite" parent="NPCs/Path2D/PathFollow2D"]
+position = Vector2( 0.0291748, 0.573364 )
+rotation = 1.9118
+frames = SubResource( 14 )
+frame = 7
+playing = true
+flip_h = true
+
+[node name="Label" type="Label" parent="NPCs/Path2D/PathFollow2D/FriedSwimming"]
+margin_left = -13.712
+margin_top = -14.0266
+margin_right = 61.288
+margin_bottom = 16.9734
+rect_scale = Vector2( 0.4, 0.4 )
+text = "friedkeenan
+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Inventory" parent="." instance=ExtResource( 7 )]
 [connection signal="pressed" from="Character/Menu/Plant" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Character/Menu/Save" to="." method="_on_Save_pressed"]
 [connection signal="pressed" from="Character/Menu/Load" to="." method="_on_Load_pressed"]

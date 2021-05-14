@@ -25,6 +25,7 @@ func _on_Timer_timeout():
 	if Stage == 4:
 		area.crop_mature()
 		emit_signal("is_mature")
+		# $MatureFlag.show() Not sure about that yet
 		$Timer.stop()
 
 func harvestable() -> bool:
