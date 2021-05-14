@@ -4,8 +4,8 @@ extends Node
 var current_scene = null
 
 export var allowed_items: Dictionary = {
-	"carrot": "res://scenes/items/carrot.gd",
-	"dummy": "res://scenes/items/dummy.tscn"
+	"Carrot": "res://scenes/items/carrot.tscn",
+	"Dummy": "res://scenes/items/dummy.tscn"
 }
 
 func _ready():

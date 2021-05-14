@@ -19,12 +19,12 @@ func get_first_empty_slot() -> Node2D:
 			return slot
 	return null
 
-func add_item(item: String, amount: int) -> bool:
+func add_item(item: String, amount: int) -> int:
 	var global = get_node("/root/Global")
 
 	if not item in global.allowed_items.keys():
 		print("Illegal item")
-		return false
+		return amount
 	
 	var item_node = load(global.allowed_items[item]).instance()
 
@@ -37,16 +37,16 @@ func add_item(item: String, amount: int) -> bool:
 			if leftover != 0:
 				add_item(item, leftover) # Recursion, lets go - I bet this will cause some weird problem one day :)
 			else:
-				return true
+				return 0
 
 	var slot = get_first_empty_slot()
 
 	if slot == null:
 		print("No empty slot found")
-		return false
+		return amount
 
 	slot.update_held_item(item_node)
-	return true
+	return 0
 	
 func _physics_process(delta):
 	for i in range(1, total_slots + 1): # Go through each slot

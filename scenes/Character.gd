@@ -67,11 +67,19 @@ func harvest_crop():
 		var crop = area.crop
 		
 		var global = get_node("/root/Global")
-		if crop.item in global.allowed_items.keys():
-			var pickup = load("res://scenes/items/overworld_pickup.tscn").instance()
 
-			get_parent().get_node("Pickups").add_child(pickup)
+		if crop.item in global.allowed_items.keys():
+			var pickups = get_parent().get_node("Pickups")
+			var pickup = load("res://scenes/items/overworld_pickup.tscn").instance()
+			pickups.add_child(pickup)
+
+			var item: Node2D = load(global.allowed_items[crop.item]).instance()
+			pickup.add_child(item)
+
 			pickup.position = area.position
+			pickup.item = item
+		else:
+			print("Item wasn't found")
 
 		area.reset()
 		crop.queue_free()

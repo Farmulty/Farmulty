@@ -1,9 +1,10 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://gfx/licensed/CHARACTERS/ANIMATION/BASE CHARACTER/PNG/WITH_FX/spr_waiting_strip9.png" type="Texture" id=1]
 [ext_resource path="res://gfx/licensed/CHARACTERS/ANIMATION/BASE CHARACTER/PNG/WITH_FX/spr_run_strip8.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Character.gd" type="Script" id=3]
 [ext_resource path="res://gfx/licensed/CHARACTERS/ANIMATION/BASE CHARACTER/PNG/WITH_FX/spr_idle_strip9.png" type="Texture" id=4]
+[ext_resource path="res://scenes/inventory/inventory.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CapsuleShape2D" id=1]
 radius = 5.74481
@@ -149,7 +150,7 @@ shape = SubResource( 1 )
 position = Vector2( 0, -0.235962 )
 frames = SubResource( 28 )
 animation = "idle"
-frame = 1
+frame = 8
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]
@@ -163,3 +164,5 @@ position = Vector2( 0, 1.12245 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D/HarvestRange"]
 shape = SubResource( 29 )
+
+[node name="Inventory" parent="." instance=ExtResource( 5 )]
