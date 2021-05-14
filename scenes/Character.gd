@@ -66,7 +66,12 @@ func harvest_crop():
 		var area = find_closest_node(area_distance)
 		var crop = area.crop
 		
-		# @TODO: Actually create some item to pickup
+		var global = get_node("/root/Global")
+		if crop.item in global.allowed_items.keys():
+			var pickup = load("res://scenes/items/overworld_pickup.tscn").instance()
+
+			get_parent().get_node("Pickups").add_child(pickup)
+			pickup.position = area.position
 
 		area.reset()
 		crop.queue_free()

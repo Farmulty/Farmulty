@@ -44,7 +44,7 @@ shape = SubResource( 2 )
 disabled = true
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 2.0
+wait_time = 0.5
 autostart = true
 
 [node name="Mature" type="Sprite" parent="."]

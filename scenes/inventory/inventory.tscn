@@ -10,7 +10,7 @@ script = ExtResource( 1 )
 [node name="Slots" type="Node2D" parent="."]
 
 [node name="SelectedBox" type="Sprite" parent="Slots"]
-position = Vector2( 152, 304 )
+position = Vector2( 192, 544 )
 scale = Vector2( 4.5, 4.5 )
 texture = ExtResource( 3 )
 

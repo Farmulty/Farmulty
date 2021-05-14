@@ -5,11 +5,6 @@ const total_slots: int = 9
 var inventory: Dictionary
 var current_slot: int
 
-var allowed_items: Dictionary = {
-	"carrot": "res://scenes/items/carrot.gd",
-	"dummy": "res://scenes/items/dummy.tscn"
-}
-
 func select_slot(slot_nr: int):
 	current_slot = slot_nr - 1
 	var selected_slot = get_node("Slots/Slot" + str(current_slot))
@@ -25,11 +20,13 @@ func get_first_empty_slot() -> Node2D:
 	return null
 
 func add_item(item: String, amount: int) -> bool:
-	if not item in allowed_items.keys():
+	var global = get_node("/root/Global")
+
+	if not item in global.allowed_items.keys():
 		print("Illegal item")
 		return false
 	
-	var item_node = load(allowed_items[item])
+	var item_node = load(global.allowed_items[item]).instance()
 
 	for i in range(total_slots): # Find if we already have the item somewhere and enough capacity for it in those slots
 		var slot = get_node("Slots/Slot" + str(i))

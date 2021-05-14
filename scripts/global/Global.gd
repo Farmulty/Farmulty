@@ -3,6 +3,11 @@ extends Node
 # Scene Data
 var current_scene = null
 
+export var allowed_items: Dictionary = {
+	"carrot": "res://scenes/items/carrot.gd",
+	"dummy": "res://scenes/items/dummy.tscn"
+}
+
 func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)

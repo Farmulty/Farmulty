@@ -69,7 +69,7 @@ animations = [ {
 "speed": 7.0
 } ]
 
-[node name="Testing" type="Node2D"]
+[node name="Overworld" type="Node2D"]
 script = ExtResource( 3 )
 __meta__ = {
 "_edit_horizontal_guides_": [ -159.79 ]
@@ -456,7 +456,7 @@ rotate = false
 position = Vector2( 0.0291748, 0.573364 )
 rotation = 1.9118
 frames = SubResource( 14 )
-frame = 4
+frame = 3
 playing = true
 flip_h = true
 
@@ -473,6 +473,9 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Pickups" type="Node2D" parent="."]
+position = Vector2( -1.78178, -0.890884 )
 
 [node name="Inventory" parent="." instance=ExtResource( 7 )]
 [connection signal="pressed" from="Character/Menu/Plant" to="." method="_on_Button_pressed"]
