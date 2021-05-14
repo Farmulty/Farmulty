@@ -13,6 +13,9 @@ func item_equals(item) -> bool:
 	return false
 
 func update_held_item(item):
+	get_parent().get_parent().get_node("Items").add_child(item)
+	item.position = position
+	item.scale = Vector2(4.5, 4.5)
 	held_item = item
 	amount_held = 1
 

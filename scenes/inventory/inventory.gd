@@ -31,7 +31,7 @@ func add_item(item: String, amount: int) -> int:
 	for i in range(total_slots): # Find if we already have the item somewhere and enough capacity for it in those slots
 		var slot = get_node("Slots/Slot" + str(i))
 
-		if slot.item_equals(item_node):
+		if slot.has_item() and slot.item_equals(item_node):
 			var leftover = slot.increase_item_amount(amount)
 
 			if leftover != 0:

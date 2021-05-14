@@ -49,3 +49,6 @@ scale = Vector2( 4.5, 4.5 )
 [node name="Slot8" parent="Slots" instance=ExtResource( 2 )]
 position = Vector2( 832, 544 )
 scale = Vector2( 4.5, 4.5 )
+
+[node name="Items" type="Node2D" parent="."]
+scale = Vector2( 1, 0.997732 )
