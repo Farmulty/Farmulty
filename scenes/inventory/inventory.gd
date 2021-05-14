@@ -30,6 +30,18 @@ func add_item(item: String, amount: int) -> bool:
 		return false
 	
 	var item_node = load(allowed_items[item])
+
+	for i in range(total_slots): # Find if we already have the item somewhere and enough capacity for it in those slots
+		var slot = get_node("Slots/Slot" + str(i))
+
+		if slot.item_equals(item_node):
+			var leftover = slot.increase_item_amount(amount)
+
+			if leftover != 0:
+				add_item(item, leftover) # Recursion, lets go - I bet this will cause some weird problem one day :)
+			else:
+				return true
+
 	var slot = get_first_empty_slot()
 
 	if slot == null:
