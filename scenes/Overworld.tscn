@@ -458,7 +458,7 @@ rotate = false
 position = Vector2( 0.0291748, 0.573364 )
 rotation = 1.9118
 frames = SubResource( 14 )
-frame = 1
+frame = 5
 playing = true
 flip_h = true
 

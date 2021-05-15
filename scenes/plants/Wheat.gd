@@ -4,7 +4,7 @@ signal is_mature
 
 export var Stage: int
 export var creation_date: int
-export var item: String = "wheat"
+export var item: String = "Wheat"
 
 var area: Node2D
 

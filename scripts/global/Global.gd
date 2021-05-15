@@ -5,6 +5,7 @@ var current_scene = null
 
 export var allowed_items: Dictionary = {
 	"Carrot": "res://scenes/items/carrot.tscn",
+	"Wheat": "res://scenes/items/wheat.tscn",
 	"Dummy": "res://scenes/items/dummy.tscn"
 }
 
