@@ -3,12 +3,24 @@ extends Node
 # Scene Data
 var current_scene = null
 
-export var allowed_items: Dictionary = {
+export var seeds: Dictionary = {
+	"Carrot Seed": "res://scenes/items/seeds/carrot_seed.tscn",
+	"Dummy Seed": "res://scenes/items/seeds/dummy_seed.tscn"
+}
+
+export var crops: Dictionary = {
 	"Carrot": "res://scenes/items/carrot.tscn",
 	"Wheat": "res://scenes/items/wheat.tscn",
 	"Dummy": "res://scenes/items/dummy.tscn"
 }
 
+export var allowed_items: Dictionary = {
+	"Carrot": "res://scenes/items/carrot.tscn",
+	"Wheat": "res://scenes/items/wheat.tscn",
+	"Dummy": "res://scenes/items/dummy.tscn",
+	"Carrot Seed": "res://scenes/items/seeds/carrot_seed.tscn",
+	"Dummy Seed": "res://scenes/items/seeds/dummy_seed.tscn"
+}
 func _ready():
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)

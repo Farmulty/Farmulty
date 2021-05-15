@@ -23,7 +23,7 @@ func find_closest_node(node: Dictionary) -> Node2D:
 	return Node2D.new() # Never should be returned
 	
 
-func plant_crop(crop: String):
+func plant_crop(crop: String) -> bool:
 	var is_plantable: bool = false
 	var area_distance: Dictionary
 
@@ -50,6 +50,8 @@ func plant_crop(crop: String):
 		crop_node.position.y = area.position.y
 		area.remove_from_group("PlantableArea") # Area is no longer plantable
 		area.add_to_group("GrowingPlantArea")
+		return true
+	return false
 
 func harvest_crop():
 	var area_distance: Dictionary

@@ -142,10 +142,10 @@ __meta__ = {
 
 [node name="Load" type="Button" parent="Character/Menu"]
 margin_left = 7.72984
-margin_top = 4.16222
-margin_right = 49.7298
-margin_bottom = 24.1622
-text = "Load"
+margin_top = 3.80867
+margin_right = 79.7298
+margin_bottom = 23.8087
+text = "Add Item"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -458,7 +458,7 @@ rotate = false
 position = Vector2( 0.0291748, 0.573364 )
 rotation = 1.9118
 frames = SubResource( 14 )
-frame = 5
+frame = 11
 playing = true
 flip_h = true
 

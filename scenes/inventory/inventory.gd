@@ -47,8 +47,26 @@ func add_item(item: String, amount: int) -> int:
 
 	slot.update_held_item(item_node)
 	return 0
-	
+
+func use_seeds():
+	var held_item
+
+	var global = get_node("/root/Global")
+	var slot_node = get_node("Slots/Slot" + str(current_slot))
+
+	if slot_node.has_item():
+		held_item = slot_node.held_item
+	else:
+		return
+
+	if held_item.item_name in global.seeds:
+		if get_parent().plant_crop(held_item.crop_name):
+			slot_node.decrease_item_amount(1)
+
 func _physics_process(delta):
 	for i in range(1, total_slots + 1): # Go through each slot
-		if Input.is_action_pressed(str(i)):
+		if Input.is_action_just_pressed(str(i)):
 			select_slot(i)
+	
+	if Input.is_action_just_pressed("E"):
+		use_seeds()
