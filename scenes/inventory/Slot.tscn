@@ -10,3 +10,13 @@ script = ExtResource( 2 )
 
 [node name="item_box" type="Sprite" parent="."]
 texture = ExtResource( 1 )
+
+[node name="item_count" type="Label" parent="."]
+margin_left = -1.37163
+margin_top = -10.4527
+margin_right = 14.6284
+margin_bottom = 3.54726
+rect_scale = Vector2( 0.2, 0.2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

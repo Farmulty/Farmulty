@@ -18,16 +18,19 @@ func update_held_item(item):
 	item.scale = Vector2(4.5, 4.5)
 	held_item = item
 	amount_held = 1
+	$item_count.text = str(amount_held)
 
 func increase_item_amount(amount: int) -> int:
 	"""Return 0 if it was successful, else the leftover amount"""
 	if held_item.max_stack < amount_held + amount:
 		print("Maximum amount reached")
 		amount_held = held_item.max_stack
+		$item_count.text = str(amount_held)
 
 		return amount - (held_item.max_stack - amount)
 
 	amount_held += amount
+	$item_count.text = str(amount_held)
 	return 0
 
 func remove_held_item():
