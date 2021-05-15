@@ -1,5 +1,7 @@
 extends Node2D
 
+onready var time = get_node("/root/Time")
+
 func _on_Harvest_pressed():
 	$Character.harvest_crop()
 
@@ -28,4 +30,5 @@ func update_plant_edges():
 	tilemap.update_bitmask_region()
 
 func _ready():
+	time.start()
 	update_plant_edges()

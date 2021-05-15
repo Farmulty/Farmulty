@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://gfx/Overworld.tres" type="TileSet" id=1]
 [ext_resource path="res://scenes/Character.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://scenes/special_area/PlantableArea.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/plants/Tree.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/special_area/PlantEdges.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/time/Shader.tscn" type="PackedScene" id=8]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -458,7 +459,7 @@ rotate = false
 position = Vector2( 0.0291748, 0.573364 )
 rotation = 1.9118
 frames = SubResource( 14 )
-frame = 9
+frame = 1
 playing = true
 flip_h = true
 
@@ -478,6 +479,8 @@ __meta__ = {
 
 [node name="Pickups" type="Node2D" parent="."]
 position = Vector2( -1.78178, -0.890884 )
+
+[node name="Shader" parent="." instance=ExtResource( 8 )]
 [connection signal="pressed" from="Character/Menu/Plant" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="Character/Menu/Save" to="." method="_on_Save_pressed"]
 [connection signal="pressed" from="Character/Menu/Load" to="." method="_on_Load_pressed"]

@@ -10,6 +10,8 @@ var plantable_crops = {
 	"Wheat": "res://scenes/plants/Wheat.tscn"
 }
 
+onready var time = get_node("/root/Time")
+
 func find_closest_node(node: Dictionary) -> Node2D:
 	""" Finds the closest Node in dictionary of nodes """
 	var sorted_areas: Array = node.values()
@@ -114,8 +116,14 @@ func get_movement():
 		$KinematicBody2D/AnimatedSprite.play("idle")
 		
 	velocity = velocity.normalized() * speed * vel_factor
+
+func update_ui():
+	$UI/Clock.text = "Clock: " + str(time.get_current_ingame_time())
+
 func _physics_process(delta):
 	get_movement()
 	velocity = $KinematicBody2D.move_and_slide(velocity)
 	current_position = position + $KinematicBody2D.position
+
+	update_ui()
 
