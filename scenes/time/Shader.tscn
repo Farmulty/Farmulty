@@ -15,7 +15,7 @@ void fragment() {
 
 [sub_resource type="ShaderMaterial" id=2]
 shader = SubResource( 1 )
-shader_param/tint = Color( 1, 1, 1, 1 )
+shader_param/tint = Color( 0.447059, 0.505882, 0.713726, 1 )
 
 [node name="DayNightCycle" type="CanvasLayer"]
 layer = 0

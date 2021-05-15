@@ -118,7 +118,10 @@ func get_movement():
 	velocity = velocity.normalized() * speed * vel_factor
 
 func update_ui():
-	$UI/Clock.text = "Clock: " + str(time.get_current_ingame_time())
+	var ingame_time = time.get_current_ingame_time()
+	var hour = int(floor(ingame_time))
+	var minutes = int((ingame_time - hour) * 60)
+	$UI/Clock.text = "Clock: " + str(hour) + ":" + str(minutes)
 
 func _physics_process(delta):
 	get_movement()

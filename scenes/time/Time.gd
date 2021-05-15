@@ -9,11 +9,11 @@ signal day_over
 
 const ingame_hours_total: int = 24 # Starting at 0
 
-const rl_sec_per_game_hour: int = 1 # Change later on after testing
+const rl_sec_per_game_hour: int = 2 # Change later on after testing
 var rl_sec_per_game_day: int = ingame_hours_total * rl_sec_per_game_hour
 var rl_sec_left: int = rl_sec_per_game_day
 
-var current_time: int = 16 # Start at 05:00
+var current_time: int = 5
 var current_hour: int = current_time
 
 const start_of_morning: int = 6 # 06:00
