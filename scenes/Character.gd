@@ -85,6 +85,7 @@ func harvest_crop():
 		crop.queue_free()
 
 func get_movement():
+	var vel_factor: float = 1
 	velocity = Vector2()
 
 	if Input.is_action_pressed("right"):
@@ -96,17 +97,21 @@ func get_movement():
 	if Input.is_action_pressed("up"):
 		velocity.y -= 1
 		
-	if velocity.y != 0 or velocity.x != 0:
-		$KinematicBody2D/AnimatedSprite.play("running")
-		
+	if velocity.y != 0 or velocity.x != 0:		
 		if velocity.x == -1:
 			$KinematicBody2D/AnimatedSprite.flip_h = true
 		else:
 			$KinematicBody2D/AnimatedSprite.flip_h = false
+
+		if Input.is_action_pressed("ctrl"):
+			vel_factor = 0.5
+			$KinematicBody2D/AnimatedSprite.play("walking")
+		else:
+			$KinematicBody2D/AnimatedSprite.play("running")
 	else:
 		$KinematicBody2D/AnimatedSprite.play("idle")
 		
-	velocity = velocity.normalized() * speed
+	velocity = velocity.normalized() * speed * vel_factor
 func _physics_process(delta):
 	get_movement()
 	velocity = $KinematicBody2D.move_and_slide(velocity)
