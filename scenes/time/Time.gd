@@ -7,9 +7,9 @@ signal night
 signal next_hour
 signal day_over
 
-const ingame_hours_total: int = 24 # Starting at 0
+const ingame_hours_total: int = 24 # Starting at 0as
 
-const rl_sec_per_game_hour: int = 2 # Change later on after testing
+const rl_sec_per_game_hour: int = 10 # Change later on after testing
 var rl_sec_per_game_day: int = ingame_hours_total * rl_sec_per_game_hour
 var rl_sec_left: int = rl_sec_per_game_day
 

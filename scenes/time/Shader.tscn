@@ -23,8 +23,10 @@ script = ExtResource( 2 )
 
 [node name="Shader" type="TextureRect" parent="."]
 material = SubResource( 2 )
+anchor_bottom = 7.12077e-07
+margin_left = -1.05945
 margin_top = 1.05946
-margin_right = 1152.0
+margin_right = 1150.94
 margin_bottom = 649.059
 texture = ExtResource( 1 )
 __meta__ = {
