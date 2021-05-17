@@ -5,6 +5,15 @@ export (int) var speed = 155
 var velocity = Vector2()
 export var current_position: Vector2 # Keeps track of current global position of the player since positon != the actual position
 
+var facing_direction
+
+enum Facing{
+	down,
+	up,
+	left,
+	right
+}
+
 var plantable_crops = {
 	"Carrots": "res://scenes/plants/Carrot.tscn",
 	"Wheat": "res://scenes/plants/Wheat.tscn"
@@ -101,11 +110,19 @@ func get_movement():
 	if Input.is_action_pressed("up"):
 		velocity.y -= 1
 		
+	if velocity.y != 0 and velocity.x == 0:
+		if velocity.y == 1:
+			facing_direction = Facing.down
+		else:
+			facing_direction = Facing.up
+	
 	if velocity.y != 0 or velocity.x != 0:		
 		if velocity.x == -1:
 			$KinematicBody2D/AnimatedSprite.flip_h = true
+			facing_direction = Facing.left
 		else:
 			$KinematicBody2D/AnimatedSprite.flip_h = false
+			facing_direction = Facing.right
 
 		if Input.is_action_pressed("ctrl"):
 			vel_factor = 0.5

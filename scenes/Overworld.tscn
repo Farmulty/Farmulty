@@ -115,6 +115,11 @@ tile_data = PoolIntArray( -1310708, 14, 0, -1310702, 14, 0, -1310685, 14, 0, -13
 
 [node name="PlantEdges" parent="Overworld" instance=ExtResource( 7 )]
 
+[node name="PlantableSpace" type="Area2D" parent="Overworld"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Overworld/PlantableSpace"]
+polygon = PoolVector2Array( 128.038, 66.2958, 731.932, 70.0039, 764.775, 102.847, 766.894, 281.367, 718.159, 280.837, 703.856, 292.491, 651.942, 293.021, 618.039, 325.864, 505.736, 422.275, 502.028, 460.416, 500.969, 474.189, 106.849, 473.659, 88.308, 474.189, 90.4269, 105.496 )
+
 [node name="Character" parent="." instance=ExtResource( 2 )]
 position = Vector2( 309.857, 132.96 )
 z_index = 5
@@ -459,6 +464,7 @@ rotate = false
 position = Vector2( 0.0291748, 0.573364 )
 rotation = 1.9118
 frames = SubResource( 14 )
+frame = 9
 playing = true
 flip_h = true
 

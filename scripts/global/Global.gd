@@ -14,6 +14,10 @@ export var crops: Dictionary = {
 	"Dummy": "res://scenes/items/dummy.tscn"
 }
 
+export var tools: Dictionary = {
+	"Shovel": "res://scenes/items/tools/shovel.tscn"
+}
+
 export var allowed_items: Dictionary
 
 func combine_two_dicts(dict1: Dictionary, dict2: Dictionary) -> Dictionary:
@@ -39,7 +43,7 @@ func _ready():
 	current_scene = root.get_child(root.get_child_count() - 1)
 
 	# Get all legal items
-	allowed_items = combine_array_of_dicts([seeds, crops])
+	allowed_items = combine_array_of_dicts([seeds, crops, tools])
 
 func goto_scene(path):
 	call_deferred("_deferred_goto_scene", path) # Make sure the scene isn't running anything

@@ -13,7 +13,7 @@ const rl_sec_per_game_hour: int = 10 # Change later on after testing
 var rl_sec_per_game_day: int = ingame_hours_total * rl_sec_per_game_hour
 var rl_sec_left: int = rl_sec_per_game_day
 
-var current_time: int = 5
+var current_time: int = 18
 var current_hour: int = current_time
 
 const start_of_morning: int = 6 # 06:00

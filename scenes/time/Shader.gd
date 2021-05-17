@@ -12,6 +12,7 @@ const late_color: Color = Color(0.521, 0.380, 0.105)
 const night_color: Color = Color(0.27, 0.34, 0.58)
 
 func _ready():
+	$Shader.show() # Literally just because I'm annoyed by it in the Overworld scene
 	$Shader.get_material().set_shader_param("tint", current_color)
 
 	time.connect("morning", self, "on_morning_cycle")

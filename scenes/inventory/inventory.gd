@@ -63,10 +63,25 @@ func use_seeds():
 		if get_parent().plant_crop(held_item.crop_name):
 			slot_node.decrease_item_amount(1)
 
+func slot_is_tool() -> bool:
+	var slot_node = get_node("Slots/Slot" + str(current_slot))
+	var global = get_node("/root/Global")
+
+	if slot_node.has_item() and slot_node.held_item.item_name in global.tools.keys():
+		return true
+	else:
+		return false
+
+func use_tool():
+	pass
+
 func _physics_process(delta):
 	for i in range(1, total_slots + 1): # Go through each slot
 		if Input.is_action_just_pressed(str(i)):
 			select_slot(i)
 	
 	if Input.is_action_just_pressed("E"):
-		use_seeds()
+		if slot_is_tool():
+			use_tool()
+		else:
+			use_seeds()
