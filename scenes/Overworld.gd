@@ -8,6 +8,9 @@ func _on_Harvest_pressed():
 func _on_Load_pressed():
 	$Character/Inventory.add_item("Carrot Seed", 1)
 
+func _on_Save_pressed():
+	$Character/Inventory.add_item("Shovel", 1)
+
 func _on_Button_pressed():
 	$Character.plant_crop($Character/Menu/CropType.text)
 func _process(delta):

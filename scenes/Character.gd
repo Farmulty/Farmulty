@@ -21,6 +21,9 @@ var plantable_crops = {
 
 onready var time = get_node("/root/Time")
 
+func get_facing_direction() -> int:
+	return facing_direction
+
 func find_closest_node(node: Dictionary) -> Node2D:
 	""" Finds the closest Node in dictionary of nodes """
 	var sorted_areas: Array = node.values()

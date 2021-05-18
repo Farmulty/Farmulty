@@ -73,7 +73,8 @@ func slot_is_tool() -> bool:
 		return false
 
 func use_tool():
-	pass
+	var slot_node = get_node("Slots/Slot" + str(current_slot))
+	slot_node.held_item.use()
 
 func _physics_process(delta):
 	for i in range(1, total_slots + 1): # Go through each slot
