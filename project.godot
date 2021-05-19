@@ -88,7 +88,7 @@ _global_script_class_icons={
 
 config/name="Farmulty"
 run/main_scene="res://scenes/MainMenu.tscn"
-config/icon="res://icon.png"
+config/icon="res://gfx/licensed/ASSETS/water.png"
 
 [autoload]
 

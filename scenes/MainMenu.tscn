@@ -1,6 +1,16 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scenes/MainMenu.gd" type="Script" id=1]
+[ext_resource path="res://gfx/PlayfairDisplayRegular-ywLOY.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://gfx/MainMenu_Background.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 120
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 2 )
 
 [node name="MainMenu" type="Control"]
 anchor_right = 1.0
@@ -10,14 +20,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+centered = false
+
 [node name="Title" type="Label" parent="."]
 anchor_left = 0.5
 anchor_right = 0.5
-margin_left = -159.18
-margin_top = 75.6807
-margin_right = -103.18
-margin_bottom = 89.6807
-rect_scale = Vector2( 6, 6 )
+margin_left = -218.64
+margin_top = 50.7073
+margin_right = 275.36
+margin_bottom = 211.707
+custom_fonts/font = SubResource( 1 )
 text = "Farmulty"
 align = 1
 valign = 1
@@ -57,15 +71,29 @@ rect_scale = Vector2( 1.5, 1.5 )
 text = "Quit Game"
 
 [node name="Label" type="Label" parent="."]
-margin_left = 5.29731
-margin_top = 462.985
-margin_right = 163.297
-margin_bottom = 527.985
-rect_scale = Vector2( 2, 2 )
+margin_left = 6.48652
+margin_top = 417.795
+margin_right = 379.487
+margin_bottom = 602.795
+custom_fonts/font = SubResource( 2 )
 text = "Controls:
 E - Interact
 WASD - Movement
 CTRL - Slower Movement"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 729.524
+margin_top = 553.365
+margin_right = 1102.52
+margin_bottom = 738.365
+custom_fonts/font = SubResource( 2 )
+text = "Created by tomGER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
