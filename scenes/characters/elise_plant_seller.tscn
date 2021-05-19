@@ -1,10 +1,11 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://gfx/licensed/SUNNYSIDE_WORLD_CHARACTERS_PARTS_V0.3.1/IDLE/base_idle_strip9.png" type="Texture" id=1]
 [ext_resource path="res://gfx/licensed/SUNNYSIDE_WORLD_CHARACTERS_PARTS_V0.3.1/IDLE/longhair_idle_strip9.png" type="Texture" id=2]
 [ext_resource path="res://addons/dialogue_editor/DialogueDialogue2D.gd" type="Script" id=3]
 [ext_resource path="res://scenes/characters/elise_plant_seller.gd" type="Script" id=4]
 [ext_resource path="res://gfx/licensed/SUNNYSIDE_WORLD_CHARACTERS_PARTS_V0.3.1/IDLE/tools_idle_strip9.png" type="Texture" id=5]
+[ext_resource path="res://gfx/licensed/ASSETS/expression_chat.png" type="Texture" id=6]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 1 )
@@ -138,7 +139,7 @@ animations = [ {
 "speed": 5.0
 } ]
 
-[sub_resource type="CircleShape2D" id=23]
+[sub_resource type="CircleShape2D" id=34]
 radius = 16.0
 
 [node name="Elise" type="Node2D"]
@@ -147,7 +148,6 @@ script = ExtResource( 4 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 self_modulate = Color( 0.92549, 0.862745, 0.862745, 1 )
 frames = SubResource( 10 )
-frame = 8
 playing = true
 
 [node name="Hair" type="AnimatedSprite" parent="AnimatedSprite"]
@@ -161,7 +161,13 @@ frames = SubResource( 33 )
 visible = false
 script = ExtResource( 3 )
 dialogue_name = "4725dd7f-5558-4486-ae77-3efdb099809c"
+activate = "action"
+cancel = "cancel"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Dialogue2D"]
 position = Vector2( -0.10511, 5.2556 )
-shape = SubResource( 23 )
+shape = SubResource( 34 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 2.71364, -16.1639 )
+texture = ExtResource( 6 )

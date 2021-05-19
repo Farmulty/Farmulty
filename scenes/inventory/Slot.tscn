@@ -21,20 +21,21 @@ margin_top = -10.4527
 margin_right = 14.6284
 margin_bottom = 3.54726
 rect_scale = Vector2( 0.2, 0.2 )
+clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="item_name" type="Label" parent="."]
-margin_left = -8.0
-margin_top = -13.8851
-margin_right = 75.0
-margin_bottom = 7.11489
+margin_left = -7.92567
+margin_top = -13.5878
+margin_right = 75.0743
+margin_bottom = 9.41219
 rect_scale = Vector2( 0.2, 0.2 )
 custom_fonts/font = SubResource( 1 )
 align = 1
 valign = 1
-autowrap = true
+clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
