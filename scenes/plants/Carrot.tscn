@@ -44,7 +44,7 @@ shape = SubResource( 2 )
 disabled = true
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.1
+wait_time = 1.5
 autostart = true
 
 [node name="Mature" type="Sprite" parent="."]
@@ -55,4 +55,5 @@ texture = SubResource( 3 )
 [node name="Top" type="Sprite" parent="Mature"]
 position = Vector2( 0, -5 )
 texture = SubResource( 4 )
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

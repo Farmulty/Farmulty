@@ -2,18 +2,6 @@ extends Node2D
 
 onready var time = get_node("/root/Time")
 var update_edges_next_frame: bool
-
-func _on_Harvest_pressed():
-	$Character.harvest_crop()
-
-func _on_Load_pressed():
-	$Character/Inventory.add_item("Carrot Seed", 1)
-
-func _on_Save_pressed():
-	$Character/Inventory.add_item("Shovel", 1)
-
-func _on_Button_pressed():
-	$Character.plant_crop($Character/Menu/CropType.text)
 func _process(delta):
 	$NPCs/Path2D/PathFollow2D.offset += 15 * delta
 

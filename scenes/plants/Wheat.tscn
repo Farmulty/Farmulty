@@ -37,4 +37,5 @@ visible = false
 position = Vector2( 0.500565, -14.2661 )
 z_index = 6
 texture = ExtResource( 7 )
+
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

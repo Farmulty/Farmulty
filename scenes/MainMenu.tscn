@@ -42,6 +42,7 @@ margin_top = 340.137
 margin_right = 575.409
 margin_bottom = 398.137
 rect_scale = Vector2( 1.5, 1.5 )
+disabled = true
 text = "Options"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -54,6 +55,17 @@ margin_right = 577.091
 margin_bottom = 527.635
 rect_scale = Vector2( 1.5, 1.5 )
 text = "Quit Game"
+
+[node name="Label" type="Label" parent="."]
+margin_left = 5.29731
+margin_top = 462.985
+margin_right = 163.297
+margin_bottom = 527.985
+rect_scale = Vector2( 2, 2 )
+text = "Controls:
+E - Interact
+WASD - Movement
+CTRL - Slower Movement"
 
 [connection signal="pressed" from="Start" to="." method="_on_Start_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]

@@ -12,6 +12,11 @@ func item_equals(item) -> bool:
 		return true
 	return false
 
+func item_name_equals(item: String) -> bool:
+	if held_item.item_name == item:
+		return true
+	return false
+
 func update_held_item(item):
 	get_parent().get_parent().get_node("Items").add_child(item)
 	item.position = position
@@ -60,8 +65,12 @@ func remove_held_item():
 func update_label():
 	if amount_held == 0:
 		$item_count.hide()
+		$item_name.hide()
 	else:
 		if not $item_count.visible:
 			$item_count.show()
+			$item_name.show()
 		
 		$item_count.text = str(amount_held)
+		$item_name.text = held_item.item_name
+		

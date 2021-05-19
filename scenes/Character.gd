@@ -11,6 +11,8 @@ export var current_position: Vector2 # Keeps track of current global position of
 
 var facing_direction
 
+onready var global = get_node("/root/Global")
+
 enum Facing{
 	down,
 	up,
@@ -85,8 +87,6 @@ func harvest_crop():
 	if is_harvestable:
 		var area = find_closest_node(area_distance)
 		var crop = area.crop
-		
-		var global = get_node("/root/Global")
 
 		if crop.item in global.allowed_items.keys():
 			var pickups = get_parent().get_node("Pickups")
@@ -117,6 +117,9 @@ func get_movement():
 			12:
 				is_digging = false
 		return
+
+	if Input.is_action_just_pressed("E"):
+		harvest_crop()
 
 	if Input.is_action_pressed("right"):
 		velocity.x += 1
@@ -158,6 +161,9 @@ func update_ui():
 	$UI/Clock.text = "Clock: " + str(hour) + ":" + str(minutes)
 
 func _physics_process(delta):
+	if global.in_dialog:
+		return
+
 	get_movement()
 	velocity = $KinematicBody2D.move_and_slide(velocity)
 	current_position = position + $KinematicBody2D.position

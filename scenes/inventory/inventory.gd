@@ -46,6 +46,11 @@ func add_item(item: String, amount: int) -> int:
 		return amount
 
 	slot.update_held_item(item_node)
+	amount -= 1
+
+	if amount > 0:
+		add_item(item, amount)
+
 	return 0
 
 func use_seeds():
@@ -72,9 +77,30 @@ func slot_is_tool() -> bool:
 	else:
 		return false
 
+func decrease_item_amount(item: String) -> bool:
+	for slot_nr in range(total_slots):
+		var slot = get_node("Slots/Slot" + str(slot_nr))
+
+		if not slot.has_item():
+			continue
+
+		if slot.item_name_equals(item) and slot.decrease_item_amount(1):
+			return true
+	return false
+
+func decrease_item_total(item: String, amount: int) -> bool:
+	for i in range(amount):
+		if not decrease_item_amount(item):
+			return false
+	return true
+
 func use_tool():
 	var slot_node = get_node("Slots/Slot" + str(current_slot))
 	slot_node.held_item.use()
+
+func _ready():
+	add_item("Carrot Seed", 1)
+	add_item("Wheat Seed", 1)
 
 func _physics_process(delta):
 	for i in range(1, total_slots + 1): # Go through each slot
