@@ -5,7 +5,7 @@ const steps_per_sec: int = 15
 
 onready var time = get_node("/root/Time")
 
-var current_color: Color = night_color # Change if needed
+var current_color: Color = day_color # Change if needed
 
 const day_color: Color = Color(1, 1, 1)
 const late_color: Color = Color(0.521, 0.380, 0.105)

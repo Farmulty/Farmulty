@@ -33,6 +33,12 @@ func increase_item_amount(amount: int) -> int:
 	update_label()
 	return 0
 
+func item_max() -> bool:
+	"""Item full"""
+	if held_item.max_stack == amount_held:
+		return true
+	return false
+
 func decrease_item_amount(amount: int) -> bool:
 	if amount_held - amount < 0:
 		return false
