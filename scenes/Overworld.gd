@@ -1,6 +1,7 @@
 extends Node2D
 
 onready var time = get_node("/root/Time")
+var update_edges_next_frame: bool
 
 func _on_Harvest_pressed():
 	$Character.harvest_crop()

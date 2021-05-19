@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=52 format=2]
+[gd_resource type="TileSet" load_steps=58 format=2]
 
 [ext_resource path="res://gfx/licensed/TILESET/SunnysideWorld_Tileset_V0.1.png" type="Texture" id=1]
 
@@ -40,6 +40,24 @@ points = PoolVector2Array( 4.2352, 8.11354, 9.25867, 6.71814, 11.7704, 11.7416, 
 
 [sub_resource type="ConvexPolygonShape2D" id=13]
 points = PoolVector2Array( 4.14285, 4.48549, 7.49182, 4.20641, 9.4454, 6.99722, 4.14285, 7.55539 )
+
+[sub_resource type="ConvexPolygonShape2D" id=51]
+points = PoolVector2Array( 4.41991, 7.86935, 6.93164, 4.52037, 11.3969, 5.3576, 12.5133, 12.0556, 4.97806, 11.4974 )
+
+[sub_resource type="ConvexPolygonShape2D" id=52]
+points = PoolVector2Array( 4.88571, 3.12495, 13.8163, 10.6602, 10.7464, 11.4974, 2.37398, 8.14842 )
+
+[sub_resource type="ConvexPolygonShape2D" id=53]
+points = PoolVector2Array( 5.07245, 6.47394, 9.53775, 7.31119, 10.6541, 11.7765, 4.51428, 12.0556 )
+
+[sub_resource type="ConvexPolygonShape2D" id=54]
+points = PoolVector2Array( 3.58469, 4.24129, 6.93367, 3.40404, 8.88724, 7.31119, 3.58469, 7.86935 )
+
+[sub_resource type="ConvexPolygonShape2D" id=55]
+points = PoolVector2Array( 5.25714, 2.75352, 10.8388, 2.47444, 12.7923, 11.4051, 2.46632, 10.8469 )
+
+[sub_resource type="ConvexPolygonShape2D" id=56]
+points = PoolVector2Array( 3.21123, 7.21884, 5.16479, 3.86986, 12.1418, 3.59077, 13.5372, 8.33517, 11.5837, 13.0796, 7.11836, 14.4749, 2.65306, 10.8469 )
 
 [sub_resource type="ConvexPolygonShape2D" id=14]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -677,7 +695,7 @@ points = PoolVector2Array( 0, 5.12174, 0, 4.31421, 11.0208, 16, 0, 16 )
 15/texture = ExtResource( 1 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
-15/region = Rect2( 16, 160, 64, 64 )
+15/region = Rect2( 48, 128, 16, 16 )
 15/tile_mode = 2
 15/autotile/icon_coordinate = Vector2( 0, 0 )
 15/autotile/tile_size = Vector2( 16, 16 )
@@ -731,3 +749,82 @@ points = PoolVector2Array( 0, 5.12174, 0, 4.31421, 11.0208, 16, 0, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 15/z_index = 0
+16/name = "SunnysideWorld_Tileset_V0.1.png 16"
+16/texture = ExtResource( 1 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 16, 160, 64, 32 )
+16/tile_mode = 2
+16/autotile/icon_coordinate = Vector2( 0, 0 )
+16/autotile/tile_size = Vector2( 16, 16 )
+16/autotile/spacing = 0
+16/autotile/occluder_map = [  ]
+16/autotile/navpoly_map = [  ]
+16/autotile/priority_map = [  ]
+16/autotile/z_index_map = [  ]
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "SunnysideWorld_Tileset_V0.1.png 17"
+17/texture = ExtResource( 1 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 16, 192, 64, 32 )
+17/tile_mode = 2
+17/autotile/icon_coordinate = Vector2( 0, 0 )
+17/autotile/tile_size = Vector2( 16, 16 )
+17/autotile/spacing = 0
+17/autotile/occluder_map = [  ]
+17/autotile/navpoly_map = [  ]
+17/autotile/priority_map = [  ]
+17/autotile/z_index_map = [  ]
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape = SubResource( 51 )
+17/shape_one_way = false
+17/shape_one_way_margin = 1.0
+17/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 51 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 52 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 2, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 53 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 3, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 54 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 0, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 55 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+}, {
+"autotile_coord": Vector2( 1, 1 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 56 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+17/z_index = 0

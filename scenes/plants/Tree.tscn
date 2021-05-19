@@ -18,6 +18,7 @@ height = 1.52749
 radius = 11.9846
 
 [node name="Tree" type="Node2D" groups=[
+"NonPlantableSpace",
 "Trees",
 ]]
 

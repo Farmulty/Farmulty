@@ -1,6 +1,10 @@
 extends Node2D
 
+signal finished_digging_animation
+
 export (int) var speed = 155
+
+var is_digging: bool
 
 var velocity = Vector2()
 export var current_position: Vector2 # Keeps track of current global position of the player since positon != the actual position
@@ -103,6 +107,16 @@ func harvest_crop():
 func get_movement():
 	var vel_factor: float = 1
 	velocity = Vector2()
+
+	if is_digging:
+		$KinematicBody2D/AnimatedSprite.play("digging")
+
+		match $KinematicBody2D/AnimatedSprite.frame:
+			7:
+				emit_signal("finished_digging_animation")
+			12:
+				is_digging = false
+		return
 
 	if Input.is_action_pressed("right"):
 		velocity.x += 1

@@ -22,10 +22,15 @@ func reset():
 func set_crop(s_crop: Node2D):
 	crop = s_crop
 
+func update_edges():
+	get_parent().get_parent().update_plant_edges()
 func _on_DetectionArea_body_entered(body):
+	var global = get_node("/root/Global")
+
 	if body.get_parent().is_in_group("PlantableArea"):
 		# Don't react to plantable areas entering the area
 		return
 	elif body.get_parent().is_in_group("Players"):
 		emit_signal("player_in_range")
-		
+	elif body.get_parent().is_in_group("NonPlantableSpace") or body.name in ["CollisionTiles"]:
+		queue_free()

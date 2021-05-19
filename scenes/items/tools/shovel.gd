@@ -35,15 +35,20 @@ func use() -> bool:
 		for area in plantable_areas.get_children():
 			if area.position == plantable_area.position: 
 				return false
-
+			
 		# Add to scene
 		plantable_areas.add_child(plantable_area)
 
-		# Update plant edges
-		Overworld.update_plant_edges()
+		player.is_digging = true # Set player into dig animation
+
+		$Regrow.start() # Schedule plant_edges update
 		return true
 	return false
 
 export var can_be_picked_up: bool = true
 export var can_be_sold: bool = false
 export var price_sold: int = 99
+
+func _on_Regrow_timeout():
+	var Overworld = get_node("/root/Overworld")
+	Overworld.update_plant_edges()
