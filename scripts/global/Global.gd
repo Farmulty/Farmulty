@@ -40,19 +40,12 @@ func combine_array_of_dicts(dict_array: Array) -> Dictionary:
 
 	return result
 
-func _ready():
-	var dialogueManager = get_tree().get_root().get_node("DialogueManager")
-	# Get Scene Switching data
+func _ready():	# Get Scene Switching data
 	var root = get_tree().get_root()
 	current_scene = root.get_child(root.get_child_count() - 1)
 
 	# Get all legal items
 	allowed_items = combine_array_of_dicts([seeds, crops, tools])
-
-	# Connect dialogmanager
-	dialogueManager.connect("dialogue_started", self, "dialog_started")
-	dialogueManager.connect("dialogue_canceled", self, "dialog_stopped")
-	dialogueManager.connect("dialogue_ended", self, "dialog_stopped")
 
 func dialog_started(dialog):
 	in_dialog = true

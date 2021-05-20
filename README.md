@@ -8,4 +8,4 @@ As the assets are licensed content, I can not upload them to Github. If you're i
 
 ## Add-Ons used:
 
-- https://github.com/VP-GAMES/DialogueEditor
+- None

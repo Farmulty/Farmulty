@@ -1,8 +1,7 @@
 extends Node2D
 
 func _ready():
-	var dialogueManager = get_tree().get_root().get_node("DialogueManager")
-	dialogueManager.connect("dialogue_event", self, "_on_dialogue_event")
+	pass
 
 func _process(delta):
 	var frame = $AnimatedSprite.frame

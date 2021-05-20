@@ -45,16 +45,16 @@ margin_top = 217.366
 margin_right = 573.727
 margin_bottom = 275.366
 rect_scale = Vector2( 1.5, 1.5 )
-text = "Launch Testworld"
+text = "Start Game"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Options" type="Button" parent="."]
-margin_left = 363.409
-margin_top = 340.137
-margin_right = 575.409
-margin_bottom = 398.137
+margin_left = 361.521
+margin_top = 339.193
+margin_right = 573.521
+margin_bottom = 397.193
 rect_scale = Vector2( 1.5, 1.5 )
 disabled = true
 text = "Options"
@@ -69,6 +69,9 @@ margin_right = 577.091
 margin_bottom = 527.635
 rect_scale = Vector2( 1.5, 1.5 )
 text = "Quit Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Label" type="Label" parent="."]
 margin_left = 6.48652
@@ -85,12 +88,14 @@ __meta__ = {
 }
 
 [node name="Label2" type="Label" parent="."]
-margin_left = 729.524
-margin_top = 553.365
-margin_right = 1102.52
-margin_bottom = 738.365
+margin_left = 639.856
+margin_top = 498.62
+margin_right = 1012.85
+margin_bottom = 683.62
 custom_fonts/font = SubResource( 2 )
-text = "Created by tomGER"
+text = "alpha-v1.0.0
+Created by tomGER"
+align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
