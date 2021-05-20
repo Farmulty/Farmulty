@@ -53,10 +53,10 @@ __meta__ = {
 }
 
 [node name="Options" type="Button" parent="."]
-margin_left = 361.521
-margin_top = 339.193
-margin_right = 573.521
-margin_bottom = 397.193
+margin_left = 361.727
+margin_top = 337.0
+margin_right = 573.727
+margin_bottom = 395.0
 rect_scale = Vector2( 1.5, 1.5 )
 disabled = true
 text = "Options"
