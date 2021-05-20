@@ -13,4 +13,3 @@ As the assets are licensed content, I can not upload them to Github. If you're i
 ## License:
 
 Uses Playfair by Claus Eggers Sørensen. http://www.forthehearts.net.
-Uses RPG Music Pack by SVL. https://svl.itch.io/rpg-music-pack-svl.

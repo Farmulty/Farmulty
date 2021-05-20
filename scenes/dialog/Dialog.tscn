@@ -67,3 +67,53 @@ autostart = true
 stream = ExtResource( 8 )
 volume_db = -18.0
 pitch_scale = 0.8
+
+[node name="Container" type="VBoxContainer" parent="."]
+margin_left = 800.0
+margin_top = 320.0
+margin_right = 1016.0
+margin_bottom = 576.0
+custom_constants/separation = 24
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button1" type="Button" parent="Container"]
+visible = false
+margin_top = 60.0
+margin_right = 216.0
+margin_bottom = 89.0
+rect_pivot_offset = Vector2( -1184, -144 )
+custom_fonts/font = ExtResource( 6 )
+text = "Option 1"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="Container"]
+visible = false
+margin_top = 113.0
+margin_right = 216.0
+margin_bottom = 142.0
+rect_pivot_offset = Vector2( -1184, -144 )
+custom_fonts/font = ExtResource( 6 )
+text = "Option 2"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="Container"]
+visible = false
+margin_top = 166.0
+margin_right = 216.0
+margin_bottom = 195.0
+rect_pivot_offset = Vector2( -1184, -144 )
+custom_fonts/font = ExtResource( 6 )
+text = "Option 3"
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
