@@ -144,7 +144,7 @@ script = ExtResource( 4 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 self_modulate = Color( 0.92549, 0.862745, 0.862745, 1 )
 frames = SubResource( 10 )
-frame = 6
+frame = 7
 playing = true
 
 [node name="Hair" type="AnimatedSprite" parent="AnimatedSprite"]

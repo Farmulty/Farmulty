@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Farmulty"
-run/main_scene="res://scenes/MainMenu.tscn"
+run/main_scene="res://scenes/menu/MainMenu.tscn"
 config/icon="res://gfx/licensed/ASSETS/water.png"
 
 [autoload]
