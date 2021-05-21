@@ -16,7 +16,7 @@ _data = {
 "points": PoolVector2Array( -47.9458, 3.74577, 47.9458, -3.74577, 87.3146, -82.3777, -7.49154, -12.361, 7.49154, 12.361, 149.869, -58.7794, 5.61865, -3.74577, -5.61865, 3.74577, 136.384, -5.58942, 28.4678, -7.49154, -28.4678, 7.49154, 85.4417, 22.5038, 0, 0, 0, 0, 13.8975, 28.8716, -7.11696, 43.0763, 7.11696, -43.0763, 1.16193, -19.4488, 0, 0, 0, 0, 87.3146, -82.3777 )
 }
 
-[sub_resource type="AtlasTexture" id=15]
+[sub_resource type="AtlasTexture" id=2]
 atlas = ExtResource( 8 )
 region = Rect2( 0, 0, 96, 64 )
 
@@ -66,7 +66,7 @@ region = Rect2( 1056, 0, 96, 64 )
 
 [sub_resource type="SpriteFrames" id=14]
 animations = [ {
-"frames": [ SubResource( 15 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
 "name": "default",
 "speed": 7.0
@@ -426,7 +426,7 @@ rotate = false
 position = Vector2( 0.0291748, 0.573364 )
 rotation = 1.9118
 frames = SubResource( 14 )
-frame = 6
+frame = 8
 playing = true
 flip_h = true
 

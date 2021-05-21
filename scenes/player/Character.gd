@@ -176,6 +176,8 @@ func update_ui():
 		global.dialog_started = false
 
 func _ready():
+	$KinematicBody2D/AnimatedSprite.play()
+
 	global.dialog_node = $UI/Dialog
 	global.player_physics_body = $KinematicBody2D
 
