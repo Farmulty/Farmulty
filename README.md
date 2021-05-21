@@ -1,6 +1,6 @@
 # Farmulty
 
-![kuZE6kuFCN](https://user-images.githubusercontent.com/25822956/118053286-87c7b800-b384-11eb-92e2-7f57431b8f32.gif)
+![TUdklXEtAC](https://user-images.githubusercontent.com/25822956/119175287-ecac9d80-ba69-11eb-80a9-61b1380611fa.gif)
 
 ## Add-Ons used:
 
