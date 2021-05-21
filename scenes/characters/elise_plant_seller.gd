@@ -39,5 +39,16 @@ const INTRODUCTION = {
 	}
 }
 
+func _on_DialogArea_chosen_option(option):
+	match option:
+		1:
+			gave("Carrot")
+		2:
+			gave("Wheat")
+		3:
+			buy_shovel()
+		_:
+			return
+
 func _ready():
 	$DialogArea.dialog = INTRODUCTION

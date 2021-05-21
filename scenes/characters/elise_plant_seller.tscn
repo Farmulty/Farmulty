@@ -145,6 +145,7 @@ script = ExtResource( 4 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 self_modulate = Color( 0.92549, 0.862745, 0.862745, 1 )
 frames = SubResource( 10 )
+frame = 8
 playing = true
 
 [node name="Hair" type="AnimatedSprite" parent="AnimatedSprite"]
@@ -161,3 +162,5 @@ texture = ExtResource( 6 )
 [node name="DialogArea" parent="." instance=ExtResource( 3 )]
 position = Vector2( 0, 5.42728 )
 scale = Vector2( 1.11764, 1.47959 )
+
+[connection signal="chosen_option" from="DialogArea" to="." method="_on_DialogArea_chosen_option"]
