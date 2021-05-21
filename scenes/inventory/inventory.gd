@@ -78,7 +78,10 @@ func slot_is_tool() -> bool:
 		return false
 
 func decrease_item_amount(item: String) -> bool:
-	for slot_nr in range(total_slots):
+	var total_slots_inverted = range(total_slots)
+	total_slots_inverted.invert()
+
+	for slot_nr in total_slots_inverted:
 		var slot = get_node("Slots/Slot" + str(slot_nr))
 
 		if not slot.has_item():
@@ -99,8 +102,8 @@ func use_tool():
 	slot_node.held_item.use()
 
 func _ready():
-	add_item("Carrot Seed", 4)
-	add_item("Wheat Seed", 4)
+	add_item("Carrot Seed", 3)
+	add_item("Wheat Seed", 3)
 
 func hide():
 	$Slots.hide()
