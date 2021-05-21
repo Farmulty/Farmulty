@@ -3,7 +3,11 @@ extends Node
 # Scene Data
 var current_scene = null
 
+var player_physics_body: KinematicBody2D
+var dialog_node: Control
+
 var in_dialog: bool
+var dialog_started: bool
 
 export var seeds: Dictionary = {
 	"Carrot Seed": "res://scenes/items/seeds/carrot_seed.tscn",

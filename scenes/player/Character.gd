@@ -160,6 +160,26 @@ func update_ui():
 	var minutes = int((ingame_time - hour) * 60)
 	$UI/Clock.text = "Clock: " + str(hour) + ":" + str(minutes)
 
+	if global.in_dialog and not global.dialog_started:
+		$Inventory.hide()
+		$UI/Dialog.show()
+
+		$UI/Dialog.start()
+
+		yield($UI/Dialog, "button")
+
+		$UI/Dialog.hide()
+		$Inventory.show()
+
+		global.dialog_started = false
+
+func _ready():
+	global.dialog_node = $UI/Dialog
+	global.player_physics_body = $KinematicBody2D
+
+func _process(delta):
+	update_ui()
+
 func _physics_process(delta):
 	if global.in_dialog:
 		return
@@ -167,6 +187,4 @@ func _physics_process(delta):
 	get_movement()
 	velocity = $KinematicBody2D.move_and_slide(velocity)
 	current_position = position + $KinematicBody2D.position
-
-	update_ui()
 

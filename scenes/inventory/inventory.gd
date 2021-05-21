@@ -102,6 +102,14 @@ func _ready():
 	add_item("Carrot Seed", 1)
 	add_item("Wheat Seed", 1)
 
+func hide():
+	$Slots.hide()
+	$Items.hide()
+
+func show():
+	$Slots.show()
+	$Items.show()
+
 func _physics_process(delta):
 	for i in range(1, total_slots + 1): # Go through each slot
 		if Input.is_action_just_pressed(str(i)):

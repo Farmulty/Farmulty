@@ -1,20 +1,11 @@
 extends Node2D
 
-func _ready():
-	pass
+onready var global = get_node("/root/Global")
 
 func _process(delta):
 	var frame = $AnimatedSprite.frame
 	$AnimatedSprite/Hair.frame = frame
 	$AnimatedSprite/Hand.frame = frame
-
-func _on_dialogue_event(event: String):
-	if event == "GAVE_CARROT":
-		gave("Carrot")
-	elif event == "GAVE_WHEAT":
-		gave("Wheat")
-	elif event == "BUY_SHOVEL":
-		buy_shovel()
 
 func buy_shovel():
 	var Overworld = get_node("/root/Overworld")
@@ -31,3 +22,22 @@ func gave(item: String):
 
 	if inv.decrease_item_amount(item):
 		inv.add_item(str(item) + " Seed", 3)
+
+const INTRODUCTION = {
+	"character": "Elise - Plant Lover",
+	"text": "Do you like plants as much as I do? I can offer you some sweet deals for your plants!",
+	"is_question": true,
+	"button_amount": 3,
+	"input1": {
+		"text": "Give Carrot for Seeds",
+	},
+	"input2": {
+		"text": "Give Wheat for Seeds",
+	},
+	"input3": {
+		"text": "Give 15 Carrots for Shovel",
+	}
+}
+
+func _ready():
+	$DialogArea.dialog = INTRODUCTION

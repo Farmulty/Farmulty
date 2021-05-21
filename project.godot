@@ -8,22 +8,6 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "Reference",
-"class": "DialogueDialogues",
-"language": "GDScript",
-"path": "res://dialogue/DialogueDialogues.gd"
-}, {
-"base": "Reference",
-"class": "DialogueEvents",
-"language": "GDScript",
-"path": "res://dialogue/DialogueEvents.gd"
-} ]
-_global_script_class_icons={
-"DialogueDialogues": "",
-"DialogueEvents": ""
-}
-
 [application]
 
 config/name="Farmulty"

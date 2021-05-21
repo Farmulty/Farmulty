@@ -1,7 +1,8 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://gfx/licensed/SUNNYSIDE_WORLD_CHARACTERS_PARTS_V0.3.1/IDLE/base_idle_strip9.png" type="Texture" id=1]
 [ext_resource path="res://gfx/licensed/SUNNYSIDE_WORLD_CHARACTERS_PARTS_V0.3.1/IDLE/longhair_idle_strip9.png" type="Texture" id=2]
+[ext_resource path="res://scenes/dialog/DialogArea.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/characters/elise_plant_seller.gd" type="Script" id=4]
 [ext_resource path="res://gfx/licensed/SUNNYSIDE_WORLD_CHARACTERS_PARTS_V0.3.1/IDLE/tools_idle_strip9.png" type="Texture" id=5]
 [ext_resource path="res://gfx/licensed/ASSETS/expression_chat.png" type="Texture" id=6]
@@ -144,7 +145,6 @@ script = ExtResource( 4 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 self_modulate = Color( 0.92549, 0.862745, 0.862745, 1 )
 frames = SubResource( 10 )
-frame = 7
 playing = true
 
 [node name="Hair" type="AnimatedSprite" parent="AnimatedSprite"]
@@ -157,3 +157,7 @@ frames = SubResource( 30 )
 [node name="MsgBox" type="Sprite" parent="."]
 position = Vector2( 2.71364, -16.1639 )
 texture = ExtResource( 6 )
+
+[node name="DialogArea" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, 5.42728 )
+scale = Vector2( 1.11764, 1.47959 )

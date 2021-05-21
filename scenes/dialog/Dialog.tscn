@@ -53,7 +53,6 @@ custom_fonts/normal_font = ExtResource( 6 )
 bbcode_enabled = true
 bbcode_text = "[b]Text[/b]"
 text = "Text"
-scroll_active = false
 scroll_following = true
 __meta__ = {
 "_edit_use_anchors_": false
@@ -94,9 +93,9 @@ __meta__ = {
 
 [node name="Button2" type="Button" parent="Container"]
 visible = false
-margin_top = 113.0
+margin_top = 87.0
 margin_right = 216.0
-margin_bottom = 142.0
+margin_bottom = 116.0
 rect_pivot_offset = Vector2( -1184, -144 )
 custom_fonts/font = ExtResource( 6 )
 text = "Option 2"
@@ -107,9 +106,9 @@ __meta__ = {
 
 [node name="Button3" type="Button" parent="Container"]
 visible = false
-margin_top = 166.0
+margin_top = 113.0
 margin_right = 216.0
-margin_bottom = 195.0
+margin_bottom = 142.0
 rect_pivot_offset = Vector2( -1184, -144 )
 custom_fonts/font = ExtResource( 6 )
 text = "Option 3"
@@ -117,3 +116,7 @@ clip_text = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[connection signal="pressed" from="Container/Button1" to="." method="_button_pressed" binds= [ "1" ]]
+[connection signal="pressed" from="Container/Button2" to="." method="_button_pressed" binds= [ "2" ]]
+[connection signal="pressed" from="Container/Button3" to="." method="_button_pressed" binds= [ "3" ]]
