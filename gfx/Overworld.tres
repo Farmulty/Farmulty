@@ -1,6 +1,10 @@
-[gd_resource type="TileSet" load_steps=54 format=2]
+[gd_resource type="TileSet" load_steps=58 format=2]
 
 [ext_resource path="res://gfx/licensed/TILESET/SunnysideWorld_Tileset_V0.1.png" type="Texture" id=1]
+[ext_resource path="res://gfx/sky_texture.png" type="Texture" id=2]
+[ext_resource path="res://gfx/cloud_1.png" type="Texture" id=3]
+[ext_resource path="res://gfx/cloud_3.png" type="Texture" id=4]
+[ext_resource path="res://gfx/cloud_2.png" type="Texture" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -63,19 +67,19 @@ points = PoolVector2Array( 4.41991, 7.86935, 6.93164, 4.52037, 11.3969, 5.3576, 
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=21]
-points = PoolVector2Array( 12.0679, 0.0887451, 16, 3.25976, 16, 16, 12.094, 11.6322 )
+points = PoolVector2Array( 12.0679, 0.0887451, 16.092, 4.3725, 16, 16, 12.094, 11.6322 )
 
 [sub_resource type="ConvexPolygonShape2D" id=22]
-points = PoolVector2Array( 0, 3.95747, 4.23383, 9.30653, 11.676, 15.8184, 0, 16 )
+points = PoolVector2Array( 0.0270805, 4.17779, 4.63537, 9.37022, 11.6452, 15.8608, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=23]
-points = PoolVector2Array( 0, 0, 12.1412, 0.0509872, 16, 3.53951, 16, 16 )
+points = PoolVector2Array( 0, 0, 12.1412, 0.0509872, 16.0587, 3.30075, 16, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=24]
 points = PoolVector2Array( 0, 3.30695, 16, 3.30695, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=25]
-points = PoolVector2Array( -0.456421, 3.61209, 15.6187, 3.61209, 16, 16, 0, 16 )
+points = PoolVector2Array( 0.0570984, 3.04112, 16.0238, 3.23585, 16, 16, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=26]
 points = PoolVector2Array( 0, 3.07437, 4.4226, 0, 16, 0, 0, 16 )
@@ -87,22 +91,22 @@ points = PoolVector2Array( 11.3996, 9.77165, 16, 4.65517, 16, 16, 3.95747, 16 )
 points = PoolVector2Array( 0, 3.95746, 4.07961, -0.170883, 4.00465, 11.8648, 0, 16 )
 
 [sub_resource type="ConvexPolygonShape2D" id=29]
-points = PoolVector2Array( 2.91132, -0.202522, 3.8849, -0.137619, 4.23722, 16, 3.36565, 17.0623 )
+points = PoolVector2Array( 2.91132, -0.202522, 3.8849, -0.462143, 3.8849, 16.4782, 2.97623, 17.257 )
 
 [sub_resource type="ConvexPolygonShape2D" id=35]
-points = PoolVector2Array( -0.265804, 12.5206, 48.1536, 12.5206, 48.4133, 13.5591, 0.0587196, 13.5591 )
+points = PoolVector2Array( 0.318344, 12.0662, 48.1537, 12.0662, 48.2186, 12.9749, 0.188534, 13.0398 )
 
 [sub_resource type="ConvexPolygonShape2D" id=36]
-points = PoolVector2Array( 16.1236, 12.6504, 15.9938, 13.5591, 13.0082, 16.0904, 11.8399, 16.0255 )
+points = PoolVector2Array( 16.3833, 12.3908, 16.9674, 13.0398, 13.0082, 16.0904, 11.8399, 16.0255 )
 
 [sub_resource type="ConvexPolygonShape2D" id=37]
-points = PoolVector2Array( -0.0378246, 11.7084, 12.0346, -0.104351, 13.0082, -0.039444, 0, 12.7007 )
+points = PoolVector2Array( -0.0378246, 11.7084, 12.0346, -0.104351, 13.2029, -0.299065, 0, 12.7007 )
 
 [sub_resource type="ConvexPolygonShape2D" id=38]
 points = PoolVector2Array( 12.0679, -0.0727081, 12.9116, 0.122009, 12.8467, 16.7378, 12.1977, 16.5431 )
 
 [sub_resource type="ConvexPolygonShape2D" id=39]
-points = PoolVector2Array( 15.8324, 12.033, 16.1569, 12.8767, 12.9765, 15.8624, 11.6288, 16 )
+points = PoolVector2Array( 15.8324, 12.033, 16.5463, 12.033, 12.9116, 16.2518, 12.0678, 16.122 )
 
 [sub_resource type="ConvexPolygonShape2D" id=58]
 points = PoolVector2Array( 2.71661, 15.9922, -17.0146, -2.96019, -16.3007, -3.80396, 4.07962, 15.8624 )
@@ -792,3 +796,59 @@ points = PoolVector2Array( 0, 5.12174, 0, 4.31421, 11.0208, 16, 0, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 17/z_index = 0
+18/name = "sky_texture.png 18"
+18/texture = ExtResource( 2 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 0, 0, 16, 16 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "cloud_1.png 19"
+19/texture = ExtResource( 3 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 0, 0, 16, 16 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+20/name = "cloud_2.png 20"
+20/texture = ExtResource( 5 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 0, 0, 16, 16 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 0, 0 )
+20/navigation_offset = Vector2( 0, 0 )
+20/shape_offset = Vector2( 0, 0 )
+20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape_one_way = false
+20/shape_one_way_margin = 0.0
+20/shapes = [  ]
+20/z_index = 0
+21/name = "cloud_3.png 21"
+21/texture = ExtResource( 4 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 0, 0, 16, 16 )
+21/tile_mode = 0
+21/occluder_offset = Vector2( 0, 0 )
+21/navigation_offset = Vector2( 0, 0 )
+21/shape_offset = Vector2( 0, 0 )
+21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+21/shape_one_way = false
+21/shape_one_way_margin = 0.0
+21/shapes = [  ]
+21/z_index = 0
