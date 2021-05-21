@@ -7,6 +7,8 @@ onready var time = get_node("/root/Time")
 
 var current_color: Color = day_color # Change if needed
 
+var is_changing: bool
+
 const day_color: Color = Color(1, 1, 1)
 const late_color: Color = Color(0.521, 0.380, 0.105)
 const night_color: Color = Color(0.27, 0.34, 0.58)

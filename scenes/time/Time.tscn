@@ -8,7 +8,4 @@ script = ExtResource( 1 )
 [node name="TimerHours" type="Timer" parent="."]
 wait_time = 60.0
 
-[node name="TimerTotal" type="Timer" parent="."]
-wait_time = 60.0
 [connection signal="timeout" from="TimerHours" to="." method="_on_TimerHours_timeout"]
-[connection signal="timeout" from="TimerTotal" to="." method="_on_TimerTotal_timeout"]
