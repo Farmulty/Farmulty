@@ -99,8 +99,8 @@ func use_tool():
 	slot_node.held_item.use()
 
 func _ready():
-	add_item("Carrot Seed", 1)
-	add_item("Wheat Seed", 1)
+	add_item("Carrot Seed", 4)
+	add_item("Wheat Seed", 4)
 
 func hide():
 	$Slots.hide()

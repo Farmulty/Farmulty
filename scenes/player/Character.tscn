@@ -246,88 +246,88 @@ atlas = ExtResource( 2 )
 region = Rect2( 672, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=59]
-atlas = ExtResource( 8 )
+atlas = ExtResource( 6 )
 region = Rect2( 0, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=60]
-atlas = ExtResource( 8 )
+atlas = ExtResource( 6 )
 region = Rect2( 96, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=61]
-atlas = ExtResource( 8 )
+atlas = ExtResource( 6 )
 region = Rect2( 192, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=62]
-atlas = ExtResource( 8 )
+atlas = ExtResource( 6 )
 region = Rect2( 288, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=63]
-atlas = ExtResource( 8 )
+atlas = ExtResource( 6 )
 region = Rect2( 384, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=64]
-atlas = ExtResource( 8 )
+atlas = ExtResource( 6 )
 region = Rect2( 480, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=65]
-atlas = ExtResource( 8 )
+atlas = ExtResource( 6 )
 region = Rect2( 576, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=66]
-atlas = ExtResource( 8 )
+atlas = ExtResource( 6 )
 region = Rect2( 672, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=67]
 atlas = ExtResource( 8 )
-region = Rect2( 768, 0, 96, 64 )
+region = Rect2( 0, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=68]
 atlas = ExtResource( 8 )
-region = Rect2( 864, 0, 96, 64 )
+region = Rect2( 96, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=69]
 atlas = ExtResource( 8 )
-region = Rect2( 960, 0, 96, 64 )
+region = Rect2( 192, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=70]
 atlas = ExtResource( 8 )
-region = Rect2( 1056, 0, 96, 64 )
+region = Rect2( 288, 0, 96, 64 )
 
 [sub_resource type="AtlasTexture" id=71]
 atlas = ExtResource( 8 )
-region = Rect2( 1152, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=72]
-atlas = ExtResource( 6 )
-region = Rect2( 0, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=73]
-atlas = ExtResource( 6 )
-region = Rect2( 96, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=74]
-atlas = ExtResource( 6 )
-region = Rect2( 192, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=75]
-atlas = ExtResource( 6 )
-region = Rect2( 288, 0, 96, 64 )
-
-[sub_resource type="AtlasTexture" id=76]
-atlas = ExtResource( 6 )
 region = Rect2( 384, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=77]
-atlas = ExtResource( 6 )
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 8 )
 region = Rect2( 480, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=78]
-atlas = ExtResource( 6 )
+[sub_resource type="AtlasTexture" id=73]
+atlas = ExtResource( 8 )
 region = Rect2( 576, 0, 96, 64 )
 
-[sub_resource type="AtlasTexture" id=79]
-atlas = ExtResource( 6 )
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 8 )
 region = Rect2( 672, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 8 )
+region = Rect2( 768, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 8 )
+region = Rect2( 864, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 8 )
+region = Rect2( 960, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 8 )
+region = Rect2( 1056, 0, 96, 64 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 8 )
+region = Rect2( 1152, 0, 96, 64 )
 
 [sub_resource type="SpriteFrames" id=80]
 animations = [ {
@@ -361,14 +361,14 @@ animations = [ {
 "name": "running",
 "speed": 8.0
 }, {
-"frames": [ SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ) ],
-"loop": true,
-"name": "digging",
-"speed": 8.0
-}, {
-"frames": [ SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ) ],
+"frames": [ SubResource( 59 ), SubResource( 60 ), SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ) ],
 "loop": true,
 "name": "walking",
+"speed": 8.0
+}, {
+"frames": [ SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ) ],
+"loop": true,
+"name": "digging",
 "speed": 8.0
 } ]
 
@@ -394,7 +394,7 @@ shape = SubResource( 1 )
 position = Vector2( 0, -0.235962 )
 frames = SubResource( 80 )
 animation = "idle"
-frame = 2
+frame = 5
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="KinematicBody2D"]

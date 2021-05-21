@@ -12,4 +12,5 @@ As the assets are licensed content, I can not upload them to Github. If you're i
 
 ## License:
 
-Uses Playfair by Claus Eggers Sørensen. http://www.forthehearts.net.
+Font: Uses Playfair by Claus Eggers Sørensen. http://www.forthehearts.net.
+Music: Uses Soundtrack produced by Dezphos. https://www.youtube.com/c/Dezphos/about.

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/20.ogg-752143bfc2a3d19f04b17ec16ab35306.oggstr"
+
+[deps]
+
+source_file="res://sounds/music/hourly/20.ogg"
+dest_files=[ "res://.import/20.ogg-752143bfc2a3d19f04b17ec16ab35306.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

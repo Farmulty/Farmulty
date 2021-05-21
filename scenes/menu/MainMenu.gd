@@ -7,3 +7,6 @@ func _on_Start_pressed():
 
 func _on_Quit_pressed():
 	get_tree().quit()
+
+func _process(delta):
+	$Path2D/PathFollow2D.offset += 20 * delta

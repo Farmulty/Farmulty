@@ -66,6 +66,7 @@ autostart = true
 stream = ExtResource( 8 )
 volume_db = -18.0
 pitch_scale = 0.8
+bus = "Soundeffects"
 
 [node name="Container" type="VBoxContainer" parent="."]
 margin_left = 800.0

@@ -2,7 +2,7 @@ extends Node2D
 
 signal finished_digging_animation
 
-export (int) var speed = 155
+export (int) var speed = 125
 
 var is_digging: bool
 
