@@ -10,29 +10,29 @@
 [ext_resource path="res://scenes/menu/MainMenuHover.tres" type="StyleBox" id=8]
 [ext_resource path="res://scenes/menu/MainMenuPressed.tres" type="StyleBox" id=9]
 
-[sub_resource type="Curve2D" id=14]
+[sub_resource type="Curve2D" id=1]
 _data = {
 "points": PoolVector2Array( -47.9458, 3.74577, 47.9458, -3.74577, 87.3146, -82.3777, -7.49154, -12.361, 7.49154, 12.361, 149.869, -58.7794, 5.61865, -3.74577, -5.61865, 3.74577, 136.384, -5.58942, 28.4678, -7.49154, -28.4678, 7.49154, 85.4417, 22.5038, 0, 0, 0, 0, 13.8975, 28.8716, -7.11696, 43.0763, 7.11696, -43.0763, 1.16193, -19.4488, 0, 0, 0, 0, 87.3146, -82.3777 )
 }
 
-[sub_resource type="DynamicFont" id=1]
+[sub_resource type="DynamicFont" id=2]
 size = 120
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=15]
+[sub_resource type="DynamicFont" id=3]
 size = 48
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=16]
+[sub_resource type="DynamicFont" id=4]
 size = 48
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=17]
+[sub_resource type="DynamicFont" id=5]
 size = 48
 font_data = ExtResource( 3 )
 
-[sub_resource type="DynamicFont" id=2]
+[sub_resource type="DynamicFont" id=6]
 font_data = ExtResource( 3 )
 
 [node name="MainMenu" type="Control"]
@@ -47,7 +47,7 @@ __meta__ = {
 
 [node name="Path2D" type="Path2D" parent="."]
 position = Vector2( 416, 417 )
-curve = SubResource( 14 )
+curve = SubResource( 1 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
 position = Vector2( 87.3146, -82.3777 )
@@ -63,7 +63,7 @@ anchor_right = 0.5
 margin_left = -247.0
 margin_right = 247.0
 margin_bottom = 161.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = SubResource( 2 )
 text = "Farmulty"
 align = 1
 valign = 1
@@ -92,7 +92,7 @@ custom_styles/hover = ExtResource( 8 )
 custom_styles/pressed = ExtResource( 9 )
 custom_styles/disabled = ExtResource( 7 )
 custom_styles/normal = ExtResource( 6 )
-custom_fonts/font = SubResource( 15 )
+custom_fonts/font = SubResource( 3 )
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 text = "Start Game"
 __meta__ = {
@@ -107,7 +107,7 @@ custom_styles/hover = ExtResource( 8 )
 custom_styles/pressed = ExtResource( 9 )
 custom_styles/disabled = ExtResource( 7 )
 custom_styles/normal = ExtResource( 6 )
-custom_fonts/font = SubResource( 16 )
+custom_fonts/font = SubResource( 4 )
 disabled = true
 text = "Options"
 __meta__ = {
@@ -122,7 +122,7 @@ custom_styles/hover = ExtResource( 8 )
 custom_styles/pressed = ExtResource( 9 )
 custom_styles/disabled = ExtResource( 7 )
 custom_styles/normal = ExtResource( 6 )
-custom_fonts/font = SubResource( 17 )
+custom_fonts/font = SubResource( 5 )
 text = "Quit Game"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -132,7 +132,7 @@ __meta__ = {
 margin_top = 497.0
 margin_right = 198.0
 margin_bottom = 609.0
-custom_fonts/font = SubResource( 2 )
+custom_fonts/font = SubResource( 6 )
 text = "Controls:
 E - Interact
 WASD - Movement

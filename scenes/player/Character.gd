@@ -161,6 +161,8 @@ func update_ui():
 	$UI/Clock.text = "Clock: " + str(hour) + ":" + str(minutes)
 
 	if global.in_dialog and not global.dialog_started:
+		$KinematicBody2D/AnimatedSprite.play("idle") # Set to idle animation when talking
+
 		$Inventory.hide()
 		$UI/Dialog.show()
 
