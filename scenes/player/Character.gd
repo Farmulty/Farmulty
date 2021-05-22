@@ -140,7 +140,7 @@ func get_movement():
 		if velocity.x == -1:
 			$KinematicBody2D/AnimatedSprite.flip_h = true
 			facing_direction = Facing.left
-		else:
+		elif velocity.x == 1:
 			$KinematicBody2D/AnimatedSprite.flip_h = false
 			facing_direction = Facing.right
 
