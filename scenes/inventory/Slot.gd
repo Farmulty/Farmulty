@@ -27,16 +27,17 @@ func update_held_item(item):
 
 func increase_item_amount(amount: int) -> int:
 	"""Return 0 if it was successful, else the leftover amount"""
-	if held_item.max_stack < amount_held + amount:
-		print("Maximum amount reached")
+	var platz: int = held_item.max_stack - amount_held
+
+	if amount - platz >= 0:
 		amount_held = held_item.max_stack
 		update_label()
-
-		return amount - (held_item.max_stack - amount)
-
-	amount_held += amount
-	update_label()
-	return 0
+		return amount - platz
+	elif platz > amount:
+		amount_held += amount
+		update_label()
+		return 0
+	return amount
 
 func item_max() -> bool:
 	"""Item full"""

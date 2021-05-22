@@ -32,10 +32,13 @@ func add_item(item: String, amount: int) -> int:
 		var slot = get_node("Slots/Slot" + str(i))
 
 		if slot.has_item() and slot.item_equals(item_node) and not slot.item_max():
-			var leftover = slot.increase_item_amount(amount)
+			amount = slot.increase_item_amount(amount)
 
-			if leftover != 0:
-				add_item(item, leftover) # Recursion, lets go - I bet this will cause some weird problem one day :)
+			if amount != 0:
+				var value = add_item(item, amount) # Recursion, lets go - I bet this will cause some weird problem one day :)
+
+				if value == 0:
+					return value
 			else:
 				return 0
 
@@ -102,8 +105,8 @@ func use_tool():
 	slot_node.held_item.use()
 
 func _ready():
-	add_item("Carrot Seed", 4)
-	add_item("Wheat Seed", 4)
+	add_item("Carrot Seed", 8 * 15)
+	# add_item("Wheat Seed", 0)
 
 func hide():
 	$Slots.hide()

@@ -21,7 +21,15 @@ func gave(item: String):
 	var inv = player.get_node("Inventory")
 
 	if inv.decrease_item_amount(item):
-		inv.add_item(str(item) + " Seed", 3)
+		var i = inv.add_item(str(item) + " Seed", 3)
+		if i != 0:
+			var pickups = get_parent().get_parent().get_node("Pickups")
+
+			for _x in range(i):
+				var overworld_pickup = load("res://scenes/items/overworld_pickup.tscn").instance()
+				pickups.add_child(overworld_pickup)
+				overworld_pickup.position = position + Vector2(0, 8)
+				overworld_pickup.add_item(item + " Seed")
 
 const INTRODUCTION = {
 	"character": "Elise - Plant Lover",

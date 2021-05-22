@@ -8,3 +8,10 @@ func _on_PickupRange_body_entered(body):
 			return
 		else:
 			queue_free()
+
+func add_item(item_n: String):
+	var global = get_node("/root/Global")
+
+	if item_n in global.allowed_items.keys():
+		item = load(global.allowed_items[item_n]).instance()
+		add_child(item)
