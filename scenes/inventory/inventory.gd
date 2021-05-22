@@ -105,8 +105,14 @@ func use_tool():
 	slot_node.held_item.use()
 
 func _ready():
-	add_item("Carrot Seed", 8 * 15)
-	# add_item("Wheat Seed", 0)
+	if OS.is_debug_build():
+		add_item("Shovel", 1)
+		add_item("Carrot", 1)
+		add_item("Wheat", 1)
+		add_item("Dummy Seed", 1)
+
+	add_item("Wheat Seed", 3)
+	add_item("Carrot Seed", 3)
 
 func hide():
 	$Slots.hide()

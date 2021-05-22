@@ -33,7 +33,7 @@
 1/region = Rect2( 224, 32, 80, 80 )
 1/tile_mode = 1
 1/autotile/bitmask_mode = 0
-1/autotile/bitmask_flags = [ Vector2( 0, 1 ), 256, Vector2( 0, 2 ), 260, Vector2( 0, 3 ), 4, Vector2( 1, 1 ), 324, Vector2( 1, 2 ), 325, Vector2( 1, 3 ), 261, Vector2( 2, 0 ), 320, Vector2( 2, 1 ), 325, Vector2( 2, 2 ), 325, Vector2( 2, 3 ), 325, Vector2( 2, 4 ), 5, Vector2( 3, 1 ), 321, Vector2( 3, 2 ), 325, Vector2( 3, 3 ), 69, Vector2( 4, 1 ), 64, Vector2( 4, 2 ), 65, Vector2( 4, 3 ), 1 ]
+1/autotile/bitmask_flags = [ Vector2( 0, 1 ), 256, Vector2( 0, 2 ), 260, Vector2( 0, 3 ), 4, Vector2( 1, 1 ), 324, Vector2( 1, 2 ), 325, Vector2( 1, 3 ), 261, Vector2( 2, 0 ), 320, Vector2( 2, 4 ), 5, Vector2( 3, 1 ), 321, Vector2( 3, 3 ), 69, Vector2( 4, 1 ), 64, Vector2( 4, 2 ), 65, Vector2( 4, 3 ), 1 ]
 1/autotile/icon_coordinate = Vector2( 2, 1 )
 1/autotile/tile_size = Vector2( 16, 16 )
 1/autotile/spacing = 0
