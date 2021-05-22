@@ -18,6 +18,7 @@ config/icon="res://gfx/licensed/ASSETS/water.png"
 
 Global="*res://scripts/global/Global.gd"
 Time="*res://scenes/time/Time.tscn"
+Dj="*res://scenes/DJ/DJ.tscn"
 
 [dialogue_editor]
 

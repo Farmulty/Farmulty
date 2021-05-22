@@ -185,6 +185,13 @@ func _process(delta):
 	update_ui()
 
 func _physics_process(delta):
+	if Input.is_action_just_pressed("escape") and not global.in_dialog:
+		match global.in_menu:
+			true:
+				$UI/Options.hide()
+			false:
+				$UI/Options.show()
+
 	if global.in_dialog:
 		return
 

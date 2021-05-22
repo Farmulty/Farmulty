@@ -1,9 +1,8 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://gfx/MainMenu_Background.png" type="Texture" id=1]
 [ext_resource path="res://scenes/menu/MainMenu.gd" type="Script" id=2]
 [ext_resource path="res://gfx/font/raw/PlayfairDisplayRegular.ttf" type="DynamicFontData" id=3]
-[ext_resource path="res://sounds/music/main_theme.ogg" type="AudioStream" id=4]
 [ext_resource path="res://gfx/font/Regular.tres" type="DynamicFont" id=5]
 [ext_resource path="res://scenes/menu/MainMenuButtonStyle.tres" type="StyleBox" id=6]
 [ext_resource path="res://scenes/menu/MainMenuDisabled.tres" type="StyleBox" id=7]
@@ -133,7 +132,7 @@ margin_top = 457.0
 margin_right = 1020.99
 margin_bottom = 642.0
 custom_fonts/font = ExtResource( 5 )
-text = "alpha-dev-v1.0.0
+text = "alpha-v1.1.0
 Created by tomGER
 Music by Dezphos
 "
@@ -141,11 +140,6 @@ align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="MainTheme" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
-autoplay = true
-bus = "Music"
 
 [node name="Options" parent="." instance=ExtResource( 10 )]
 visible = false

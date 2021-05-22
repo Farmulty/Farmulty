@@ -15,15 +15,21 @@ func _on_Music_value_changed(value: float):
 
 func _on_Soundeffects_value_changed(value: float):
 	change_volume("SFX", value)
-
-func _process(delta):
-	if Input.is_action_just_pressed("escape"):
-		emit_signal("close_options")
+	$SFX.play()
 
 func show():
+	var global = get_node("/root/Global")
+
 	$Music.value = get_volume("Music")
 	$Soundeffects.value = get_volume("SFX")
 	visible = true
+	global.in_menu = true
+
+func hide():
+	var global = get_node("/root/Global")
+
+	global.in_menu = false
+	visible = false
 
 func _on_Quit_pressed():
 	emit_signal("close_options")
